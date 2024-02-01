@@ -15,7 +15,7 @@
     max-height: 100vh;
     background-color: rgb(0, 0, 0);
     overflow: hidden;
-    z-index:-1;
+    z-index:0;
 }
 .hero__image > img{
     position: absolute;
@@ -27,6 +27,7 @@
 .hero__headlines{
     width: 100%;
     padding-left: 6em;
+    z-index: 2;
 }
 .hero__headline{
     color: rgb(241, 241, 255);
@@ -44,6 +45,7 @@
 .hero__button{
     width: 100%;
     padding-left: 6em;
+    z-index: 3;
 }
 .hero__button > .button{
     display: block;

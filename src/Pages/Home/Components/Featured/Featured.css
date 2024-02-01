@@ -1,0 +1,90 @@
+.Featured{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 25em;
+    margin: 0 auto;
+    padding: 2em 0em;
+    /* background-color:#1d1d1c; */
+    color: white;
+    /* border:1px solid red; */
+}
+.featured__header{
+    display: flex;
+    justify-content: space-between;
+}
+.bg__tagline{
+    display: flex;
+    text-align: center;
+    position:absolute;
+    font-size: 12em;
+    font-weight: 900;
+    letter-spacing: .1em;
+    color:#13131374;
+    z-index: 0;
+}
+.Featured__headline{
+}
+.featured__filter{
+    display: flex;
+    gap: 4em;
+    padding-right: 2em;
+}
+.featured__filter > li{
+    display: flex;
+    gap: 1em;
+    cursor: pointer;
+    transition: all .3 ease-in-out;
+}
+.featured__filter > li:hover{
+    color: rgb(188, 135, 36);
+}
+.featured__filter > li > img{
+    width: 1.3em;
+    height: 1.3em;
+}
+.featured-cars{
+    display: flex;
+    justify-content: space-between;
+}
+.featured-car{
+    width: 25%;
+    z-index: 20;
+    z-index: 1;
+    margin-top: 5em;
+}
+.features-car__image{
+    width: 100%;
+    height: 10em;
+    overflow: hidden;
+}
+.features-car__image > img{
+    width: 100%;
+    object-fit: cover;
+}
+.featured-car__name{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+.featured-car__year{
+    text-align: center;
+    color: rgba(110, 110, 110, 0.819);
+}
+.featured-car__price{
+    display: flex;
+    justify-content: space-between;
+    padding: 0em 2em;
+    font-weight: 600;
+    color: rgb(188, 135, 36);
+}
+a{
+    font-style: none;
+    font-weight: 400;
+    color: rgb(188, 135, 36);
+}
+.featured-car__price > p > small{
+    color: rgba(110, 110, 110, 0.819) !important;
+}
