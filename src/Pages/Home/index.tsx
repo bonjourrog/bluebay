@@ -1,4 +1,5 @@
 import Header from "../../Components/Header";
+import Location from "../../Components/Location";
 import Featured from "./Components/Featured";
 import Hero from "./Components/Hero";
 import "./Home.css";
@@ -8,6 +9,7 @@ const Home = () => {
             <Header />
             <Hero />
             <Featured />
+            <Location />
         </div>
     );
 };

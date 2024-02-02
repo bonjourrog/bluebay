@@ -63,9 +63,6 @@ const Featured = () => {
                         </li>
                     </ul>
                 </li>
-
-                {/* <li className="featured-car"></li>
-                <li className="featured-car"></li> */}
             </ul>
         </section>
     );
