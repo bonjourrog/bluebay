@@ -4,19 +4,20 @@
 }
 .nav{
     position: fixed;
-    left: 0;
-    top: 0;
+    left: 50%;
     display: flex;
-    width: 100%;
-    height: 8em;
-    padding: 0em 8em;
+    padding: 0em 3em;
+    transform: translateX(-50%);
     z-index: 3;
+    transition: all .3s ease-in-out;
 }
 .logo{
     display: flex;
     align-items: center;
-    color: rgb(198, 200, 255);
+    font-weight: 900;
+    color: rgb(72, 95, 200);
     height: 100%;
+    transition: all .3s ease-in-out;
 }
 .nav__list{
     height: 100%;
@@ -26,11 +27,13 @@
     gap: 2em;
     width: 100%;
     list-style: none;
-    color: white;
+    color: rgb(40, 40, 40);
     transition: all .3s ease-in-out;
 }
 .nav__list > li{
     cursor: pointer;
+    transition: all .2s ease-in-out;
+    /* border-bottom: .2em solid transparent; */
 }
 .menu{
     display: none;
