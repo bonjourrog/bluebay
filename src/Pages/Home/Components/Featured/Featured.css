@@ -2,22 +2,21 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 25em;
+    width: 100%;
+    min-height: 30em;
     margin: 0 auto;
-    padding: 2em 0em;
-    /* background-color:#1d1d1c; */
+    padding: 2em 10em;
     color: white;
-    /* border:1px solid red; */
 }
 .featured__header{
     display: flex;
     justify-content: space-between;
 }
 .bg__tagline{
-    display: flex;
-    text-align: center;
+    display: block;
     position:absolute;
+    width: 100%;
+    text-align: center;
     font-size: 12em;
     font-weight: 900;
     letter-spacing: .1em;
@@ -25,66 +24,46 @@
     z-index: 0;
 }
 .Featured__headline{
+    color: white;
 }
 .featured__filter{
     display: flex;
-    gap: 4em;
+    gap: 1em;
     padding-right: 2em;
 }
 .featured__filter > li{
+    position: relative;
+    /* width: 8em; */
+    height: 2.5em;
     display: flex;
-    gap: 1em;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: all .3 ease-in-out;
+    overflow: hidden;
+    border-radius: 5em;
+    background-color: rgb(21, 21, 21);
+    transition: all .3s ease-in-out;
+}
+.featured__filter > li > div{
+    position: absolute;
+    top: 0;
+    left: .5em;
+    display: flex;
+    align-items: center;
+    gap: .8em;
+    width: 8em;
+    height: 100%;
 }
 .featured__filter > li:hover{
-    color: rgb(188, 135, 36);
+    color: rgb(117, 156, 227) !important;
 }
 .featured__filter > li > img{
     width: 1.3em;
     height: 1.3em;
 }
 .featured-cars{
-    display: flex;
-    justify-content: space-between;
-}
-.featured-car{
-    width: 25%;
-    z-index: 20;
-    z-index: 1;
-    margin-top: 5em;
-}
-.features-car__image{
-    width: 100%;
-    height: 10em;
-    overflow: hidden;
-}
-.features-car__image > img{
-    width: 100%;
-    object-fit: cover;
-}
-.featured-car__name{
-    text-align: center;
-    font-size: 1.3em;
-    font-weight: 700;
-    letter-spacing: .1em;
-}
-.featured-car__year{
-    text-align: center;
-    color: rgba(110, 110, 110, 0.819);
-}
-.featured-car__price{
-    display: flex;
-    justify-content: space-between;
-    padding: 0em 2em;
-    font-weight: 600;
-    color: rgb(188, 135, 36);
-}
-a{
-    font-style: none;
-    font-weight: 400;
-    color: rgb(188, 135, 36);
-}
-.featured-car__price > p > small{
-    color: rgba(110, 110, 110, 0.819) !important;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(21em, 1fr));
+    gap: 5em;
 }
