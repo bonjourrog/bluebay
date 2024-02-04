@@ -1,68 +1,54 @@
+import { useEffect, useState } from "react";
 import "./Featured.css";
+import { Vehicle } from "../../../../Entity/Vehicle";
+import { VEHICLES_DATA_MOCK } from "../../../../Mocks/Vehicles";
+import FeaturedCard from "./Components/FeaturedCar";
+import Filters from "./Components/Filters";
+import { Filter } from "../../../../Entity/Filter";
 
 const Featured = () => {
+    const [vehicles, setVehicles] = useState<Vehicle[]>([]);
+    const [vehiclesToShow, setVehiclesToShow] = useState<Vehicle[]>([]);
+    const [filter, setFilter] = useState<Filter>({
+        chico: false,
+        grandes: false,
+        all: true,
+    });
+
+    const getVehicles = () => {
+        setVehicles(VEHICLES_DATA_MOCK);
+        setVehiclesToShow(vehicles);
+
+        const filterApply = Object.entries(filter)
+            .filter(([_, value]) => value === true)
+            .map(([key]) => key);
+
+        const vehiclesfiltered: Vehicle[] = vehicles.filter(
+            (elem) => elem.type === filterApply[0]
+        );
+
+        if (vehiclesfiltered.length === 0) {
+            setVehiclesToShow(vehicles);
+            return;
+        }
+        setVehiclesToShow(vehiclesfiltered);
+    };
+
+    useEffect(() => {
+        getVehicles();
+    }, [filter]);
+
     return (
         <section className="Featured">
             <section className="featured__header">
                 <h2 className="Featured__headline">Budget-Friendly Choices</h2>
-                <ul className="featured__filter">
-                    <li>
-                        <img src="https://img.icons8.com/material-outlined/24/737373/sedan.png" />
-                        <p>chicos</p>
-                    </li>
-                    <li>
-                        <img src="https://img.icons8.com/material-outlined/24/737373/suv-2.png" />
-                        <p>grandes</p>
-                    </li>
-                </ul>
+                <Filters setFilter={setFilter} filter={filter} />
             </section>
             <ul className="featured-cars">
-                <span className="bg__tagline">BLUE BLAY</span>
-                <li className="featured-car">
-                    <div className="features-car__image">
-                        <img src="https://www.kia.com/content/dam/kwcms/mx/es/images/showroom/2022/fortesd/specs/Componentes_Forte22_LX.png" />
-                    </div>
-                    <ul>
-                        <li className="featured-car__name">KIA FORTE</li>
-                        <li className="featured-car__year">2024</li>
-                        <li className="featured-car__price">
-                            <p>
-                                $1800<small>/Día</small>
-                            </p>
-                            <a href="#">Ver Más</a>
-                        </li>
-                    </ul>
-                </li>
-                <li className="featured-car">
-                    <div className="features-car__image">
-                        <img src="https://www.kia.com/content/dam/kwcms/mx/es/images/showroom/2022/fortesd/specs/Componentes_Forte22_LX.png" />
-                    </div>
-                    <ul>
-                        <li className="featured-car__name">KIA FORTE</li>
-                        <li className="featured-car__year">2024</li>
-                        <li className="featured-car__price">
-                            <p>
-                                $1800<small>/Día</small>
-                            </p>
-                            <a href="#">Ver Más</a>
-                        </li>
-                    </ul>
-                </li>
-                <li className="featured-car">
-                    <div className="features-car__image">
-                        <img src="https://www.kia.com/content/dam/kwcms/mx/es/images/showroom/2022/fortesd/specs/Componentes_Forte22_LX.png" />
-                    </div>
-                    <ul>
-                        <li className="featured-car__name">KIA FORTE</li>
-                        <li className="featured-car__year">2024</li>
-                        <li className="featured-car__price">
-                            <p>
-                                $1800<small>/Día</small>
-                            </p>
-                            <a href="#">Ver Más</a>
-                        </li>
-                    </ul>
-                </li>
+                <p className="bg__tagline">BLUE BAY</p>
+                {vehiclesToShow.map((vehicle, index) => (
+                    <FeaturedCard key={index} vehicle={vehicle} />
+                ))}
             </ul>
         </section>
     );

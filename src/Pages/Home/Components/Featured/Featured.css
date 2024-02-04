@@ -26,41 +26,6 @@
 .Featured__headline{
     color: white;
 }
-.featured__filter{
-    display: flex;
-    gap: 1em;
-    padding-right: 2em;
-}
-.featured__filter > li{
-    position: relative;
-    /* width: 8em; */
-    height: 2.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 5em;
-    background-color: rgb(21, 21, 21);
-    transition: all .3s ease-in-out;
-}
-.featured__filter > li > div{
-    position: absolute;
-    top: 0;
-    left: .5em;
-    display: flex;
-    align-items: center;
-    gap: .8em;
-    width: 8em;
-    height: 100%;
-}
-.featured__filter > li:hover{
-    color: rgb(117, 156, 227) !important;
-}
-.featured__filter > li > img{
-    width: 1.3em;
-    height: 1.3em;
-}
 .featured-cars{
     position: relative;
     display: grid;
