@@ -1,0 +1,109 @@
+.WhyUs{
+    position: relative;
+    width: 100%;
+    min-height: 40em;
+    padding: 6em 12em 0em 0em;
+    background-color: #E4E4E4;
+}
+.WhyUs__headline{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    padding-left: 4em;
+    font-size: 3em;
+    font-weight: 800;
+    color: #1e1e1e;
+}
+.WhyUs__headline>span{
+    width: 20%;
+    height: 0em;
+    margin-right: .3em;
+    border-bottom: .15em solid #44519c;
+}
+.WhyUs__headline > p:nth-child(3){
+    color: #44519c;
+}
+.whyus__features{
+    width: 60%;
+    height: 26em;
+    padding-left: 12em;
+}
+.whyus__features-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 12em);
+    gap: 3em;
+    justify-content: center;
+    height: 100%;
+    padding-top: 2em;
+}
+.whyus__feature{
+    position: relative;
+    max-width: 15em;
+    font-size: .8em;
+    line-height: 1.7em;
+}
+.whyus__feature-icon{
+    position: absolute;
+    top: 0;
+    left: -2em;
+    width: 1.5em;
+    height: 1.5em;
+    color: #606fbf;
+}
+.whyus__feature>p:nth-child(2){
+    font-weight: 600;
+}
+.whyus__call-to-action{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    width: 80%;
+    height: 10em;
+    padding-left: 12em;
+    background-color: #1e1e1e;
+}
+.whyus__call-to-action > p{
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #E4E4E4;
+}
+.whyus__call-to-action > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 17em;
+    background-color: transparent;
+    color: #606fbf;
+    font-weight: 600;
+    border: .1em solid #606fbf;
+    padding: 1.6em 2em;
+}
+.whyus__image{
+    position: absolute;
+    top: 50%;
+    right: 10em;
+    width: 35em;
+    height: 35em;
+    border-radius: .2em;
+    transform: translateY(-50%);
+    box-shadow: -.3em .3em 1em rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    z-index: 1;
+}
+.whyus__image::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
+.whyus__image>img{
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+}
