@@ -9,6 +9,7 @@
     padding: 0em 3em;
     transform: translateX(-50%);
     z-index: 3;
+    box-shadow: 0em  .3em .4em rgba(0, 0, 0, 0.06);
     transition: all .3s ease-in-out;
 }
 .logo{
