@@ -1,3 +1,4 @@
+import "react-datepicker/dist/react-datepicker.css";
 import { useEffect, useState } from "react";
 import "./Featured.css";
 import { Vehicle } from "../../../../Entity/Vehicle";
@@ -5,10 +6,12 @@ import { VEHICLES_DATA_MOCK } from "../../../../Mocks/Vehicles";
 import FeaturedCard from "./Components/FeaturedCar";
 import Filters from "./Components/Filters";
 import { Filter } from "../../../../Entity/Filter";
+import Search from "../../../../Components/Search";
 
 const Featured = () => {
     const [vehicles, setVehicles] = useState<Vehicle[]>([]);
     const [vehiclesToShow, setVehiclesToShow] = useState<Vehicle[]>([]);
+
     const [filter, setFilter] = useState<Filter>({
         chico: false,
         grandes: false,
@@ -40,6 +43,9 @@ const Featured = () => {
 
     return (
         <section className="Featured">
+            <section className="search-date">
+                <Search />
+            </section>
             <section className="featured__header">
                 <h2 className="Featured__headline">Budget-Friendly Choices</h2>
                 <Filters setFilter={setFilter} filter={filter} />
