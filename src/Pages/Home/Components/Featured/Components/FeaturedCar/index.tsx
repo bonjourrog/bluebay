@@ -1,7 +1,15 @@
+import { useContext } from "react";
 import "./FeaturedCard.css";
 import { FeaturedCardProps } from "./FeaturesCard.props";
+import { VehicleContext } from "../../../../../../Context/Vehicle";
 
 const FeaturedCard: React.FC<FeaturedCardProps> = ({ vehicle }) => {
+    const { setIsDetailsOpen, setVehicleToShow } = useContext(VehicleContext);
+
+    const handleSeeMoreButton = () => {
+        setIsDetailsOpen(true);
+        setVehicleToShow(vehicle);
+    };
     return (
         <>
             <li className="featured-car">
@@ -35,9 +43,12 @@ const FeaturedCard: React.FC<FeaturedCardProps> = ({ vehicle }) => {
                             ${vehicle.dailyRate}
                             <small>/Día</small>
                         </p>
-                        <a className="see-more" href="#">
+                        <button
+                            onClick={() => handleSeeMoreButton()}
+                            className="see-more"
+                        >
                             Ver Más
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </li>

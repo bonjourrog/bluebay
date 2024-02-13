@@ -1,5 +1,5 @@
 import "react-datepicker/dist/react-datepicker.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Featured.css";
 import { Vehicle } from "../../../../Entity/Vehicle";
 import { VEHICLES_DATA_MOCK } from "../../../../Mocks/Vehicles";
@@ -7,15 +7,16 @@ import FeaturedCard from "./Components/FeaturedCar";
 import Filters from "./Components/Filters";
 import { Filter } from "../../../../Entity/Filter";
 import Search from "../../../../Components/Search";
+import { VehicleContext } from "../../../../Context/Vehicle";
 
 const Featured = () => {
-    const [vehicles, setVehicles] = useState<Vehicle[]>([]);
+    const { vehicles, setVehicles } = useContext(VehicleContext);
     const [vehiclesToShow, setVehiclesToShow] = useState<Vehicle[]>([]);
 
     const [filter, setFilter] = useState<Filter>({
-        chico: false,
+        chico: true,
         grandes: false,
-        all: true,
+        all: false,
     });
 
     const getVehicles = () => {
