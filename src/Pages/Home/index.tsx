@@ -1,3 +1,4 @@
+import Footer from "../../Components/Footer";
 import Header from "../../Components/Header";
 import Carwash from "./Components/CarWash";
 import Contact from "./Components/Contact";
@@ -15,6 +16,7 @@ const Home = () => {
             <WhyUs />
             <Contact />
             <Carwash />
+            <Footer />
             <VehicleDetails />
         </div>
     );
