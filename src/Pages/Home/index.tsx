@@ -1,4 +1,5 @@
 import Header from "../../Components/Header";
+import Carwash from "./Components/CarWash";
 import Contact from "./Components/Contact";
 import Featured from "./Components/Featured";
 import Hero from "./Components/Hero";
@@ -13,6 +14,7 @@ const Home = () => {
             <Featured />
             <WhyUs />
             <Contact />
+            <Carwash />
             <VehicleDetails />
         </div>
     );
