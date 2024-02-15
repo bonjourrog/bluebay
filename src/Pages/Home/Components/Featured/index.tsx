@@ -44,11 +44,11 @@ const Featured = () => {
 
     return (
         <section className="Featured">
-            <section className="search-date">
+            {/* <section className="search-date">
                 <Search />
-            </section>
+            </section> */}
             <section className="featured__header">
-                <h2 className="Featured__headline">Budget-Friendly Choices</h2>
+                <h2 className="Featured__headline">Conoce nuestra flota</h2>
                 <Filters setFilter={setFilter} filter={filter} />
             </section>
             <ul className="featured-cars">

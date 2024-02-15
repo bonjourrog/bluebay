@@ -3,7 +3,6 @@
     z-index: 20;
     z-index: 1;
     margin-top: 5em;
-    /* border: 1px solid red; */
 }
 .features-car__image{
     width: 100%;
@@ -55,4 +54,9 @@
 }
 .featured-car__price > p > small{
     color: rgba(110, 110, 110, 0.819) !important;
+}
+@media screen and (max-width: 700px){
+    .featured-car__price{
+        padding: 2em 7vw;
+    }
 }
