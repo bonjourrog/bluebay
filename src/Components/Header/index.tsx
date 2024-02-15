@@ -33,7 +33,7 @@ const Header = () => {
                 className="nav"
             >
                 <p
-                    style={{ fontSize: scrolling ? "1em" : "2em" }}
+                    style={{ fontSize: scrolling ? "1em" : "" }}
                     className="logo"
                 >
                     BLUEBAY
