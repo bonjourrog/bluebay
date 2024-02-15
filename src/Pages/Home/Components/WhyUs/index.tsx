@@ -70,14 +70,14 @@ const WhyUs = () => {
                 </ul>
             </section>
             <section className="whyus__call-to-action">
-                <p>Book with us</p>
+                {/* <p>Book with us</p>
                 <button>
                     Make a reservation <FaArrowRightLong />
-                </button>
+                </button> */}
+                <div className="whyus__image">
+                    <img src="https://res.cloudinary.com/dtrkv16qb/image/upload/v1707074029/bluebay/id81o0pmu55q9cjzsq6c.png" />
+                </div>
             </section>
-            <div className="whyus__image">
-                <img src="https://res.cloudinary.com/dtrkv16qb/image/upload/v1707074029/bluebay/id81o0pmu55q9cjzsq6c.png" />
-            </div>
         </section>
     );
 };

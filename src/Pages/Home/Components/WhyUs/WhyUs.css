@@ -2,13 +2,15 @@
     position: relative;
     width: 100%;
     min-height: 40em;
-    padding: 6em 12em 0em 0em;
+    padding-top: 6em;
     background-color: #E4E4E4;
 }
 .WhyUs__headline{
+    position: relative;
     display: flex;
     align-items: center;
     gap: .5em;
+    width: 90%;
     padding-left: 4em;
     font-size: 3em;
     font-weight: 800;
@@ -24,9 +26,11 @@
     color: #44519c;
 }
 .whyus__features{
-    width: 60%;
-    height: 26em;
-    padding-left: 12em;
+    position: relative;
+    width: 50%;
+    min-height: 26em;
+    padding-left: 10em;
+    margin-bottom: 3em;
 }
 .whyus__features-list{
     display: grid;
@@ -54,11 +58,12 @@
     font-weight: 600;
 }
 .whyus__call-to-action{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1em;
-    width: 80%;
+    width: 70%;
     height: 10em;
     padding-left: 12em;
     background-color: #1e1e1e;
@@ -82,15 +87,14 @@
 }
 .whyus__image{
     position: absolute;
-    top: 50%;
-    right: 10em;
+    bottom: 60%;
+    right: -22em;
     width: 35em;
     height: 35em;
     border-radius: .2em;
-    transform: translateY(-50%);
     box-shadow: -.3em .3em 1em rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    z-index: 1;
+    z-index: 3;
 }
 .whyus__image::before{
     content: "";
@@ -106,4 +110,97 @@
     width: 100%;
     object-fit: cover;
     transform: scale(1.1);
+}
+@media screen and (max-width: 920px) {
+    .WhyUs{
+        min-height: 80em;
+    }
+    .WhyUs__headline{
+        position: absolute;
+        width: 100%;
+        left: -.5em;
+        top: 12em;
+        font-size: 2.5em;
+        z-index: 5;
+    }
+    .WhyUs__headline>span{
+        position: absolute;
+        bottom: -.5em;
+        left: 4em
+    }
+    .whyus__features{
+        width: 100%;
+        min-height: 50em;
+        padding: 0;
+    }
+    .whyus__features-list{
+        position: absolute;
+        top: 20em;
+        right: 50%;
+        width: 80%;
+        height: 100%;
+        padding: 3em;
+        padding-top: 13em;
+        transform: translateX(50%);
+        background-color: #e4e4e4;
+        border-radius: .3em;
+        z-index: 4;
+    }
+    .whyus__feature{
+        display: block;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    .whyus__feature-icon{
+        position: relative;
+        display: block;
+        left: 0;
+        margin: 0 auto;
+    }
+    .whyus__call-to-action{
+        width: 100%;
+        padding: 0;
+        height: 2em;
+        align-items: center;
+        background-color: transparent;
+    }
+    .whyus__image{
+        width: 100%;
+        top: -59em;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+@media screen and (max-width: 430px){
+    .WhyUs{
+        padding: 4em 0em;
+    }
+    .WhyUs__headline{
+        position: relative;
+        top: 0;
+    }
+    .WhyUs__headline{
+        font-size: 1.2em;
+    }
+    .whyus__features{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .whyus__features-list{
+        position: relative;
+        top: 0;
+        right: 0;
+        padding: 0;
+        padding-top: 4em;
+        width: 100%;
+        transform: none;
+    }
+    .whyus__call-to-action{
+        display: none;
+    }
+    .whyus__image{
+        display: none;
+    }
 }
