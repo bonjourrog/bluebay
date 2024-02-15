@@ -1,5 +1,5 @@
 import "./WhyUs.css";
-import { FaArrowRightLong, FaRegCalendarCheck } from "react-icons/fa6";
+import { FaRegCalendarCheck } from "react-icons/fa6";
 import { BiSolidTimeFive } from "react-icons/bi";
 import { MdLocalCarWash } from "react-icons/md";
 import { IoCalendarNumber } from "react-icons/io5";

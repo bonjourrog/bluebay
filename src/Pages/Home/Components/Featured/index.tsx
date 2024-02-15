@@ -6,7 +6,6 @@ import { VEHICLES_DATA_MOCK } from "../../../../Mocks/Vehicles";
 import FeaturedCard from "./Components/FeaturedCar";
 import Filters from "./Components/Filters";
 import { Filter } from "../../../../Entity/Filter";
-import Search from "../../../../Components/Search";
 import { VehicleContext } from "../../../../Context/Vehicle";
 
 const Featured = () => {

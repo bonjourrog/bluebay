@@ -8,14 +8,11 @@ const Filters: React.FC<FilterProps> = ({ filter, setFilter }) => {
         <ul className="featured__filter">
             <li
                 onClick={() =>
-                    setFilter(
-                        (prevVal) =>
-                            (prevVal = {
-                                all: true,
-                                chico: false,
-                                grandes: false,
-                            })
-                    )
+                    setFilter({
+                        all: true,
+                        chico: false,
+                        grandes: false,
+                    })
                 }
                 style={{
                     color: filter.all
@@ -41,14 +38,11 @@ const Filters: React.FC<FilterProps> = ({ filter, setFilter }) => {
             </li>
             <li
                 onClick={() =>
-                    setFilter(
-                        (prevVal) =>
-                            (prevVal = {
-                                all: false,
-                                chico: true,
-                                grandes: false,
-                            })
-                    )
+                    setFilter({
+                        all: false,
+                        chico: true,
+                        grandes: false,
+                    })
                 }
                 style={{
                     color: filter.chico
@@ -64,14 +58,11 @@ const Filters: React.FC<FilterProps> = ({ filter, setFilter }) => {
             </li>
             <li
                 onClick={() =>
-                    setFilter(
-                        (prevVal) =>
-                            (prevVal = {
-                                all: false,
-                                chico: false,
-                                grandes: true,
-                            })
-                    )
+                    setFilter({
+                        all: false,
+                        chico: false,
+                        grandes: true,
+                    })
                 }
                 style={{
                     color: filter.grandes
