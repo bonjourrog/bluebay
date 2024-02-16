@@ -8,8 +8,9 @@ const VehicleDetails = () => {
         useContext(VehicleContext);
     return (
         <section
-            className="Vehicle-Details"
-            style={{ width: isDetailsOpen ? "30em" : "0em" }}
+            className={`Vehicle-Details ${
+                isDetailsOpen ? "details-opened" : "details-closed"
+            }`}
         >
             <div className="details">
                 <div className="features-header">

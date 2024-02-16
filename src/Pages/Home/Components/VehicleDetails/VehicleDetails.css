@@ -116,9 +116,27 @@
     height: 3em;
     padding: 0em 2em;
 }
-
+.details-opened{
+    width: 30em;
+}
+.details-closed{
+    width: 0em;
+}
 .close-details{
     cursor: pointer;
     font-size: 2em;
     color: white;
+}
+@media screen and (max-width:700px) {
+    .details-opened{
+        width: 100%;
+        padding: 0;
+    }
+    .details{
+        width: 100%;
+    }
+    .details-list{
+        width: 100%;
+        padding: 0;
+    }
 }
