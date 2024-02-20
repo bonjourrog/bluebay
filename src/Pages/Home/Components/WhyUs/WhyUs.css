@@ -3,7 +3,8 @@
     width: 100%;
     min-height: 40em;
     padding-top: 6em;
-    background-color: #E4E4E4;
+    background-color: white;
+    /*background-color: #E4E4E4;*/
 }
 .WhyUs__headline{
     position: relative;
@@ -20,10 +21,10 @@
     width: 20%;
     height: 0em;
     margin-right: .3em;
-    border-bottom: .15em solid #44519c;
+    border-bottom: .15em solid var(--app-blue-cobalt);
 }
 .WhyUs__headline > p:nth-child(3){
-    color: #44519c;
+    color: var(--app-blue-cobalt);
 }
 .whyus__features{
     position: relative;

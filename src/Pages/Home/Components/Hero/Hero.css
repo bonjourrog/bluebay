@@ -19,10 +19,12 @@
 }
 .hero__image > img{
     position: absolute;
+    left: -7em;
     height: 100%;
     width: 100%;
     object-fit: cover;
-    /* opacity: .8; */
+    transform: scale(1.4);
+    opacity: .6;
 }
 .hero__headlines{
     width: 100%;

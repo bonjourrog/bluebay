@@ -5,13 +5,13 @@ const Hero = () => {
         <section className="hero">
             <div className="hero__image">
                 <img
-                    src="https://res.cloudinary.com/dtrkv16qb/image/upload/v1706902237/bluebay/hqk9dj9bfreduarjisyc.png"
+                    src="https://res.cloudinary.com/dzqoo2so5/image/upload/v1708315925/bluebay/images/pfv4x9zrwgaxaccz8fxw.jpg"
                     alt="parked cars"
                 />
             </div>
             <div className="hero__headlines">
                 <h1 className="hero__tagline hero__headline">
-                    Ride with Confidence
+                    Tu próximo destino te espera
                     {/* Unleash the Journey <br />
                     Embrace the Experience */}
                 </h1>
