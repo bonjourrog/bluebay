@@ -1,9 +1,9 @@
 import Footer from "../../Components/Footer";
 import Header from "../../Components/Header";
-import Carwash from "./Components/CarWash";
 import Contact from "./Components/Contact";
 import Featured from "./Components/Featured";
 import Hero from "./Components/Hero";
+import Services from "./Components/Services";
 import VehicleDetails from "./Components/VehicleDetails";
 import WhyUs from "./Components/WhyUs";
 import "./Home.css";
@@ -14,8 +14,8 @@ const Home = () => {
             <Hero />
             <Featured />
             <WhyUs />
+            <Services/>
             <Contact />
-            <Carwash />
             <Footer />
             <VehicleDetails />
         </div>
