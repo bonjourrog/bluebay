@@ -26,8 +26,12 @@ const Contact = () => {
                     <h3 className="business-name">BLUE BAY</h3>
                     <p className="business-city">Puerto Peñasco</p>
                 </div>
-                <label htmlFor="email">
+                <label htmlFor="name">
                     <p>Nombre</p>
+                    <input id="name" type="name" />
+                </label>
+                <label htmlFor="email">
+                    <p>Correo</p>
                     <input id="email" type="email" />
                 </label>
                 <label htmlFor="">
@@ -38,6 +42,20 @@ const Contact = () => {
             </form>
             <h2 className="location-headline">CONTACT</h2>
             <ul className="business-info">
+                <li className="busines__contact">
+                    <li>
+                        <MdEmail />
+                        atencionalcliente@bluebaycarrental.com
+                    </li>
+                    <li>
+                        <MdLocalPhone />
+                        630-380-5280
+                    </li>
+                    <li>
+                        <TiLocation />
+                        Blv. Freemont 210
+                    </li>
+                </li>
                 <li className="business__socials">
                     <a href="#">
                         <FaFacebook className="business__social-icon" />
@@ -48,20 +66,6 @@ const Contact = () => {
                     <a href="#">
                         <IoLogoWhatsapp className="business__social-icon" />
                     </a>
-                </li>
-                <li className="busines__contact">
-                    <li>
-                        <MdEmail />
-                        contact@bluebay.com
-                    </li>
-                    <li>
-                        <MdLocalPhone />
-                        0000000000
-                    </li>
-                    <li>
-                        <TiLocation />
-                        Blv. Freemont
-                    </li>
                 </li>
             </ul>
             <MapContainer center={position} zoom={16} scrollWheelZoom={false}>

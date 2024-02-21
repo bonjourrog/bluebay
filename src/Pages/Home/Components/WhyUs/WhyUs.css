@@ -4,7 +4,6 @@
     min-height: 40em;
     padding-top: 6em;
     background-color: white;
-    /*background-color: #E4E4E4;*/
 }
 .WhyUs__headline{
     position: relative;
@@ -53,7 +52,7 @@
     left: -2em;
     width: 1.5em;
     height: 1.5em;
-    color: #606fbf;
+    color: var(--app-blue-cobalt);
 }
 .whyus__feature>p:nth-child(2){
     font-weight: 600;
@@ -143,7 +142,8 @@
         padding: 3em;
         padding-top: 13em;
         transform: translateX(50%);
-        background-color: #e4e4e4;
+        background-color: rgb(255, 255, 255);
+        box-shadow: .3em .3em .6em rgba(0, 0, 0, 0.1);
         border-radius: .3em;
         z-index: 4;
     }
@@ -175,14 +175,12 @@
 }
 @media screen and (max-width: 430px){
     .WhyUs{
-        padding: 4em 0em;
+        padding:0em;
     }
     .WhyUs__headline{
         position: relative;
-        top: 0;
-    }
-    .WhyUs__headline{
-        font-size: 1.2em;
+        top: 0em;
+        font-size: 1.6em;
     }
     .whyus__features{
         width: 100%;
@@ -193,10 +191,12 @@
         position: relative;
         top: 0;
         right: 0;
-        padding: 0;
-        padding-top: 4em;
+        padding: 0em;
+        padding-top: 6em;
+        padding-bottom: 3em;
         width: 100%;
         transform: none;
+        box-shadow: none;
     }
     .whyus__call-to-action{
         display: none;

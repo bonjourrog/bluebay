@@ -10,16 +10,15 @@
     display: flex;
     width: 100%;
     height: 30em;
-    background-color: black;
+    background-color: rgb(24, 24, 24);
     overflow: hidden;
 }
 .Services__header > img{
     position: absolute;
-    left: -50%;
-    top: -70%;
-    transform: translate(50%);
+    top: 0;
+    left: 0;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     opacity: .5;
 }
 .Services__headline{
@@ -43,7 +42,9 @@
 .Services__list{
     position: absolute;
     top: -5em;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    place-content: center;
     justify-content: center;
     align-items: center;
     gap: 6em;
@@ -55,10 +56,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     gap: 3em;
     width: 20em;
-    height: 100%;
+    height: 20em;
     border-radius: .3em;
     background-color: white;
     box-shadow: .3em .3em 1em rgba(0, 0, 0, 0.2);
@@ -95,10 +97,8 @@
 }
 .service__image{
     width: 4em;
+    object-fit: contain;
     transform: all .3s ease-in-out;
-}
-service__image>svg >path{
-    fill: red;
 }
 .service__button{
     position: absolute;
@@ -115,4 +115,62 @@ service__image>svg >path{
 .service__button:hover{
     background-color: white;
     color: var(--app-blue-cobalt);
+}
+@media screen and (max-width:900px) {
+    .Services{
+        height: 40em;
+    }
+    .Services__header > img{
+        transform: scale(1.2);
+    }
+    .services__message{
+        padding: 9em 5em 2em 5em;
+    }
+    .Services__headline{
+        padding: 2em;
+    }
+    .Services__list{
+        grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(12em), 1fr);
+        gap: 2em;
+        top: -10em;
+        padding: 0em 2em;
+        border: .1me solid red;
+    }
+    .service{
+        gap: 1em;
+        width: 100%;
+        height: 15em;
+    }
+    .service > h4{
+        font-size: 1em;
+    }
+    .service > img{
+        width: 2em;
+    }
+}
+@media screen and (max-width: 430px){
+    .Services{
+        height: 76em;
+    }
+    .Services__header > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .Services__headline{
+        padding: 1.5em .8em;
+    }
+    .services__message{
+        padding: 8em 2em;
+    }
+    .Services__list{
+        top: -14em;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        gap: 3em;
+        height: 65em;
+    }
+    .service{
+        margin: 0 auto;
+    }
 }

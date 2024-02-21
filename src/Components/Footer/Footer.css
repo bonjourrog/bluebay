@@ -11,7 +11,7 @@
 .Footer__logo{
     font-size: 2em;
     font-weight: 800;
-    color: #e4e4e4;
+    color: #c9d4f7;
 }
 .Footer__socials{
     display: flex;
@@ -22,5 +22,10 @@
 }
 .Footer__message{
     margin-top: 2em;
-    color: #e4e4e4;
+    color: #141414;
+}
+@media screen and (max-width: 920px){
+    .Footer{
+        padding: 2em 3em;
+    }
 }

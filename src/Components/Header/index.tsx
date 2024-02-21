@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Header.css";
+import { RiMenu4Fill } from "react-icons/ri";
 
 const Header = () => {
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
@@ -22,9 +23,6 @@ const Header = () => {
         <header className="header">
             <nav
                 style={{
-                    top: scrolling ? "1.5em" : "0em",
-                    width: scrolling ? "97%" : "100%",
-                    borderRadius: scrolling ? "1em" : "0em",
                     height: scrolling ? "4em" : "6em",
                     backgroundColor: scrolling
                         ? "rgba(255, 255, 255, 0.96)"
@@ -41,8 +39,10 @@ const Header = () => {
                 <span
                     onClick={() => setToggleMenu(!toggleMenu)}
                     className="menu"
+                    // style={{top: scrolling ? '1em' : '2em'}}
                 >
-                    <img src="https://img.icons8.com/ios-filled/30/FFFFFF/menu--v6.png" />
+                    <RiMenu4Fill style={{color: toggleMenu ? 'white' : '#09225D', fontSize:"2em"}}/>
+                    {/* <img src={`https://img.icons8.com/ios-filled/30/${toggleMenu ? '09225D' : 'white'}/menu--v6.png`}/> */}
                 </span>
                 <ul
                     className={`nav__list ${

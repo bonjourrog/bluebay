@@ -1,19 +1,18 @@
 .featured__filter{
     display: flex;
-    gap: 1em;
+    /* gap: 1em; */
     padding-right: 2em;
 }
 .featured__filter > li{
     position: relative;
-    /* width: 8em; */
     height: 2.5em;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     overflow: hidden;
-    border-radius: 5em;
-    background-color: rgb(21, 21, 21);
+    /* border-radius: 5em; */
+    background-color: rgb(27, 27, 27);
     transition: all .3s ease-in-out;
 }
 .featured__filter > li > div{
