@@ -63,7 +63,6 @@ const Header = () => {
                     </li>
                     <li>Services</li>
                     <li>Contact</li>
-                    <li>carwash</li>
                 </ul>
             </nav>
         </header>
