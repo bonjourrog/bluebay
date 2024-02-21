@@ -19,7 +19,7 @@ const FeaturedCard: React.FC<FeaturedCardProps> = ({ vehicle }) => {
                 <ul>
                     <li className="featured-car__name">
                         {vehicle.make} {vehicle.model}
-                        {vehicle.sport ? (
+                        {/* {vehicle.sport ? (
                             <p
                                 style={{
                                     position: "absolute",
@@ -35,7 +35,7 @@ const FeaturedCard: React.FC<FeaturedCardProps> = ({ vehicle }) => {
                             >
                                 sport
                             </p>
-                        ) : null}
+                        ) : null} */}
                     </li>
                     <li className="featured-car__year">2024</li>
                     <li className="featured-car__price">
