@@ -32,9 +32,8 @@
     gap: 2em;
     width: 100%;
     list-style: none;
-    color: white;
-    transition: all .3s ease-in-out;
-    background-color: var(--app-gray);
+    color: var(--app-gray);
+    
 }
 .nav__list > li{
     cursor: pointer;
@@ -59,6 +58,9 @@
         height: 100vh;
         font-size: 2em;
         z-index: 10;
+        color: white;
+        transition: all .3s ease-in-out;
+        background-color: var(--app-gray);
     }
     .menu{
         display: block;
