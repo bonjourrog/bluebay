@@ -56,7 +56,7 @@ const Contact = () => {
                         Blv. Freemont 210
                     </li>
                 </li>
-                <li className="business__socials">
+                {/* <li className="business__socials">
                     <a href="#">
                         <FaFacebook className="business__social-icon" />
                     </a>
@@ -66,7 +66,7 @@ const Contact = () => {
                     <a href="#">
                         <IoLogoWhatsapp className="business__social-icon" />
                     </a>
-                </li>
+                </li> */}
             </ul>
             <MapContainer center={position} zoom={16} scrollWheelZoom={false}>
                 <TileLayer
