@@ -11,7 +11,7 @@ const WhyUs = () => {
         <section className="WhyUs">
             <h2 className="WhyUs__headline">
                 <span></span>
-                <p>WHY</p>
+                <p>¿Por qué</p>
                 <p>BLUE BAY</p>
                 <p>?</p>
             </h2>
@@ -19,52 +19,44 @@ const WhyUs = () => {
                 <ul className="whyus__features-list">
                     <li className="whyus__feature">
                         <FaChartSimple className="whyus__feature-icon" />
-                        <p>Transparent Rates</p>
+                        <p>Tarifas transparentes</p>
                         <p>
-                            Clear and straightforward rates with no hidden
-                            surprises.
+                            Tarifas claras y directas sin sorpresas ocultas.
                         </p>
                     </li>
                     <li className="whyus__feature">
                         <RiUserSmileFill className="whyus__feature-icon" />
-                        <p>Customer Satisfaction Commitment</p>
+                        <p>Compromiso de satisfacción del cliente</p>
                         <p>
-                            We strive to exceed your expectations and ensure you
-                            enjoy your rental experience to the fullest.
+                            Nos esforzamos por superar sus expectativas y garantizar que disfrute al máximo de su experiencia de alquiler.
                         </p>
                     </li>
                     <li className="whyus__feature">
                         <FaRegCalendarCheck className="whyus__feature-icon" />
-                        <p>Easy Booking</p>
+                        <p>Reserva fácil</p>
                         <p>
-                            We simplify the booking process, allowing you to
-                            secure your car quickly without unnecessary
-                            complications.
+                            Simplificamos el proceso de reserva, permitiéndote asegurar tu coche rápidamente y sin complicaciones innecesarias.
                         </p>
                     </li>
                     <li className="whyus__feature">
                         <BiSolidTimeFive className="whyus__feature-icon" />
-                        <p>Flexible Hours</p>
+                        <p>Horario flexible</p>
                         <p>
-                            We adapt to your schedule, enabling you to pick up
-                            and return the car at times that suit your needs.
+                            Nos adaptamos a tus horarios, permitiéndote recoger y devolver el coche en el horario que más te convenga.
                         </p>
                     </li>
                     <li className="whyus__feature">
                         <IoCalendarNumber className="whyus__feature-icon" />
-                        <p>24/7 Assistance</p>
+                        <p>Asistencia 24/7</p>
                         <p>
-                            We're available around the clock to provide
-                            assistance and resolve any issues you may encounter
-                            during your trip.
+                            Estamos disponibles las 24 horas para brindar asistencia y resolver cualquier problema que pueda encontrar durante su viaje.
                         </p>
                     </li>
                     <li className="whyus__feature">
                         <MdLocalCarWash className="whyus__feature-icon" />
-                        <p>Cleanliness and Maintenance</p>
+                        <p>Limpieza y mantenimiento</p>
                         <p>
-                            We keep our cars in impeccable condition, ensuring
-                            each vehicle is clean and ready for the road.
+                            Mantenemos nuestros autos en impecables condiciones, asegurando que cada vehículo esté limpio y listo para la carretera.
                         </p>
                     </li>
                 </ul>
