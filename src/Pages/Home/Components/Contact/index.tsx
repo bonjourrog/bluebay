@@ -3,9 +3,6 @@ import "leaflet/dist/leaflet.css";
 import "./Contact.css";
 import { Icon, LatLngExpression } from "leaflet";
 import { TiLocation } from "react-icons/ti";
-import { FaFacebook } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
-import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
 
 const Contact = () => {
@@ -56,17 +53,6 @@ const Contact = () => {
                         Blv. Freemont 210
                     </li>
                 </li>
-                {/* <li className="business__socials">
-                    <a href="#">
-                        <FaFacebook className="business__social-icon" />
-                    </a>
-                    <a href="#">
-                        <RiInstagramFill className="business__social-icon" />
-                    </a>
-                    <a href="#">
-                        <IoLogoWhatsapp className="business__social-icon" />
-                    </a>
-                </li> */}
             </ul>
             <MapContainer center={position} zoom={16} scrollWheelZoom={false}>
                 <TileLayer
