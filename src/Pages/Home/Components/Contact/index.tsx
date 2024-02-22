@@ -46,7 +46,7 @@ const Contact = () => {
                     </li>
                     <li>
                         <MdLocalPhone />
-                        630-380-5280
+                        638-380-5280
                     </li>
                     <li>
                         <TiLocation />

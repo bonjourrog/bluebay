@@ -67,7 +67,7 @@ const WhyUs = () => {
                     Make a reservation <FaArrowRightLong />
                 </button> */}
                 <div className="whyus__image">
-                    <img src="https://res.cloudinary.com/dtrkv16qb/image/upload/v1707074029/bluebay/id81o0pmu55q9cjzsq6c.png" />
+                    <img src="https://res.cloudinary.com/dzqoo2so5/image/upload/v1708627618/bluebay/images/z1yqutc6dlgvfuyaa1hb.jpg" />
                 </div>
             </section>
         </section>
