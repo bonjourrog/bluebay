@@ -1,6 +1,7 @@
 
 export interface Filter {
-    chico: boolean;
-    grandes: boolean;
+    small: boolean;
+    medium?: boolean;
+    large: boolean;
     all: boolean;
 }
