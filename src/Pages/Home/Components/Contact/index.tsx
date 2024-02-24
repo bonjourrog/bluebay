@@ -17,7 +17,7 @@ const Contact = () => {
     });
 
     return (
-        <section className="Location">
+        <section className="Location" id="contact">
             <form className="form">
                 <div className="form__header">
                     <h3 className="business-name">BLUE BAY</h3>

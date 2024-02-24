@@ -48,6 +48,18 @@
 .menu__closed{
     right: -100vw;
 }
+.unactive-link{
+    font-weight: 400;
+    letter-spacing: 0em;
+    border-bottom: .2em solid rgba(72, 95, 200, 0);
+    transition: all .3s ease-in-out;
+}
+.active-link{
+    font-weight: 700;
+    letter-spacing: .1em;
+    border-bottom: .2em solid rgb(72, 95, 200);
+    transition:all .3s ease-in-out;
+}
 @media screen and (max-width: 920px) {
     .nav__list{
         position: fixed;

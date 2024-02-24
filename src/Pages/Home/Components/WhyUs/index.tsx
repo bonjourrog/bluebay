@@ -8,7 +8,7 @@ import { FaChartSimple } from "react-icons/fa6";
 
 const WhyUs = () => {
     return (
-        <section className="WhyUs">
+        <section className="WhyUs" id="why-us">
             <h2 className="WhyUs__headline">
                 <span></span>
                 <p>¿Por qué</p>

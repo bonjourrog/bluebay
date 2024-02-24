@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Header.css";
 import { RiMenu4Fill } from "react-icons/ri";
+import { Link } from "react-scroll";
 
 const Header = () => {
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
@@ -39,30 +40,27 @@ const Header = () => {
                 <span
                     onClick={() => setToggleMenu(!toggleMenu)}
                     className="menu"
-                    // style={{top: scrolling ? '1em' : '2em'}}
                 >
                     <RiMenu4Fill style={{color: toggleMenu ? 'white' : '#09225D', fontSize:"2em"}}/>
-                    {/* <img src={`https://img.icons8.com/ios-filled/30/${toggleMenu ? '09225D' : 'white'}/menu--v6.png`}/> */}
                 </span>
                 <ul
                     className={`nav__list ${
                         toggleMenu ? "menu__opened" : "menu__closed"
                     }`}
                 >
-                    <li
-                        style={{
-                            fontWeight: scroll > 490 ? "700" : "400",
-                            letterSpacing: scroll > 490 ? ".1em" : "0em",
-                            borderBottom:
-                                scroll > 490
-                                    ? ".2em solid rgb(72, 95, 200)"
-                                    : ".2em solid transparent",
-                        }}
-                    >
-                        Fleet
+                    <li>
+                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="fleet" smooth={true} activeClass="active-link" spy={true}>Fleet</Link>
+                        
                     </li>
-                    <li>Services</li>
-                    <li>Contact</li>
+                    <li>
+                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="why-us" smooth={true} activeClass="active-link" spy={true}>¿Por qué elegirnos?</Link>
+                    </li>
+                    <li>
+                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="services" smooth={true} activeClass="active-link" spy={true}>Services</Link>
+                    </li>
+                    <li>
+                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="contact" smooth={true} activeClass="active-link" spy={true}>Contact</Link>
+                    </li>
                 </ul>
             </nav>
         </header>
