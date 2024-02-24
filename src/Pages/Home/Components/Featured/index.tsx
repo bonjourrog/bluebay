@@ -2,7 +2,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useContext, useEffect, useState } from "react";
 import "./Featured.css";
 import { Vehicle } from "../../../../Entity/Vehicle";
-import { VEHICLES_DATA_MOCK } from "../../../../Mocks/Vehicles";
 import FeaturedCard from "./Components/FeaturedCar";
 import Filters from "./Components/Filters";
 import { Filter } from "../../../../Entity/Filter";

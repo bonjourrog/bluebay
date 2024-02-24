@@ -40,18 +40,20 @@ const Contact = () => {
             <h2 className="location-headline">CONTACT</h2>
             <ul className="business-info">
                 <li className="busines__contact">
-                    <li>
-                        <MdEmail />
-                        atencionalcliente@bluebaycarrental.com
-                    </li>
-                    <li>
-                        <MdLocalPhone />
-                        638-380-5280
-                    </li>
-                    <li>
-                        <TiLocation />
-                        Blv. Freemont 210
-                    </li>
+                    <ul>
+                        <li>
+                            <MdEmail />
+                            atencionalcliente@bluebaycarrental.com
+                        </li>
+                        <li>
+                            <MdLocalPhone />
+                            638-380-5280
+                        </li>
+                        <li>
+                            <TiLocation />
+                            Blv. Freemont 210
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <MapContainer center={position} zoom={16} scrollWheelZoom={false}>

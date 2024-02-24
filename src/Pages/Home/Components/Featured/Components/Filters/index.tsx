@@ -10,8 +10,8 @@ const Filters: React.FC<FilterProps> = ({ filter, setFilter }) => {
                 onClick={() =>
                     setFilter({
                         all: true,
-                        chico: false,
-                        grandes: false,
+                        small: false,
+                        large: false,
                     })
                 }
                 style={{
@@ -40,15 +40,15 @@ const Filters: React.FC<FilterProps> = ({ filter, setFilter }) => {
                 onClick={() =>
                     setFilter({
                         all: false,
-                        chico: true,
-                        grandes: false,
+                        small: true,
+                        large: false,
                     })
                 }
                 style={{
-                    color: filter.chico
+                    color: filter.small
                         ? "rgb(117, 156, 227)"
                         : "rgba(110, 110, 110, 0.819)",
-                    width: filter.chico ? "6.5em" : "2.5em",
+                    width: filter.small ? "6.5em" : "2.5em",
                 }}
             >
                 <div>
@@ -60,15 +60,15 @@ const Filters: React.FC<FilterProps> = ({ filter, setFilter }) => {
                 onClick={() =>
                     setFilter({
                         all: false,
-                        chico: false,
-                        grandes: true,
+                        small: false,
+                        large: true,
                     })
                 }
                 style={{
-                    color: filter.grandes
+                    color: filter.large
                         ? "rgb(117, 156, 227)"
                         : "rgba(110, 110, 110, 0.819)",
-                    width: filter.grandes ? "8em" : "2.5em",
+                    width: filter.large ? "8em" : "2.5em",
                 }}
             >
                 <div>
