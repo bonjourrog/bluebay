@@ -40,7 +40,7 @@ const FeaturedCard: React.FC<FeaturedCardProps> = ({ vehicle }) => {
                     <li className="featured-car__year">2024</li>
                     <li className="featured-car__price">
                         <p>
-                            ${vehicle.dailyRate}
+                            ${vehicle.daily_rate}
                             <small>/Día</small>
                         </p>
                         <button

@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 const Header = () => {
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
     const [scrolling, setScrolling] = useState<boolean>(false);
-    const [scroll, setScroll] = useState<number>(0);
+    const [_,setScroll] = useState<number>(0);
 
     const handleScroll = () => {
         setScrolling(window.scrollY > 6);

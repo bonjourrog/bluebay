@@ -43,7 +43,7 @@ const VehicleDetails = () => {
                         ) : undefined}
                     </p>
                     <p className="vehicle-price">
-                        ${vehicleToShow.dailyRate}
+                        ${vehicleToShow.daily_rate}
                         <small style={{ color: "gray", fontSize: ".7em" }}>
                             /Day
                         </small>
@@ -76,7 +76,7 @@ const VehicleDetails = () => {
                                 src="https://img.icons8.com/ios-glyphs/30/FFFFFF/queue.png"
                                 alt="queue"
                             />
-                            {vehicleToShow.passengerCapacity}
+                            {vehicleToShow.passenger_capacity}
                         </li>
                         {vehicleToShow.available ? (
                             <li style={{ color: "rgb(82, 186, 82)" }}>
