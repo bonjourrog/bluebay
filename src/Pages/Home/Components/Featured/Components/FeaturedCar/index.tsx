@@ -14,7 +14,7 @@ const FeaturedCard: React.FC<FeaturedCardProps> = ({ vehicle }) => {
         <>
             <li className="featured-car">
                 <div className="features-car__image">
-                    <img src={vehicle.image} />
+                    <img src={vehicle.image} alt={`${vehicle.make} ${vehicle.model} images with transparent background`}/>
                 </div>
                 <ul>
                     <li className="featured-car__name">
