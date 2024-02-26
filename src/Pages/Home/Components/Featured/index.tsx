@@ -39,9 +39,7 @@ const Featured = () => {
         FirebaseService.getVehicles().then(res=>{
             setVehicles(res);
             setVehiclesToShow(res);
-            console.log(vehicles);
         }).catch(e=>{
-            console.log(e);
             
         })
     },[])
@@ -52,9 +50,6 @@ const Featured = () => {
 
     return (
         <section className="Featured" id="fleet">
-            {/* <section className="search-date">
-                <Search />
-            </section> */}
             <section className="featured__header">
                 <h2 className="Featured__headline">Conoce nuestra flota</h2>
                 <Filters setFilter={setFilter} filter={filter} />

@@ -23,17 +23,6 @@ const VehicleDetails = () => {
                     <div className="photo-to-show">
                         <img src={vehicleToShow.image} alt={`foto de un ${vehicleToShow.make} ${vehicleToShow.model} ${vehicleToShow.color}`} />
                     </div>
-                    <ul className="photos-list">
-                        <li>
-                            <img src={vehicleToShow.image} alt={`Foto del interios de un ${vehicleToShow.make} ${vehicleToShow.model} ${vehicleToShow.color}`} />
-                        </li>
-                        <li>
-                            <img src={vehicleToShow.image} alt={`Foto del interios de un ${vehicleToShow.make} ${vehicleToShow.model} ${vehicleToShow.color}`} />
-                        </li>
-                        <li>
-                            <img src={vehicleToShow.image} alt={`Foto del interios de un ${vehicleToShow.make} ${vehicleToShow.model} ${vehicleToShow.color}`} />
-                        </li>
-                    </ul>
                 </div>
                 <div className="details-list">
                     <p className="vehicle__name">

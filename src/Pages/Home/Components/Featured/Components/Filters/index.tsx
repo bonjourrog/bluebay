@@ -16,8 +16,8 @@ const Filters: React.FC<FilterProps> = ({ filter, setFilter }) => {
                 }
                 style={{
                     color: filter.all
-                        ? "rgb(117, 156, 227)"
-                        : "rgba(110, 110, 110, 0.819)",
+                        ? "#85B4F9"
+                        : "rgb(234, 234, 234)",
                     width: filter.all ? "5em" : "2.5em",
                 }}
             >
@@ -46,8 +46,8 @@ const Filters: React.FC<FilterProps> = ({ filter, setFilter }) => {
                 }
                 style={{
                     color: filter.small
-                        ? "rgb(117, 156, 227)"
-                        : "rgba(110, 110, 110, 0.819)",
+                        ? "#85B4F9"
+                        : "rgb(234, 234, 234)",
                     width: filter.small ? "6.5em" : "2.5em",
                 }}
             >
@@ -66,8 +66,8 @@ const Filters: React.FC<FilterProps> = ({ filter, setFilter }) => {
                 }
                 style={{
                     color: filter.large
-                        ? "rgb(117, 156, 227)"
-                        : "rgba(110, 110, 110, 0.819)",
+                        ? "#85B4F9"
+                        : "rgb(234, 234, 234)",
                     width: filter.large ? "8em" : "2.5em",
                 }}
             >

@@ -30,7 +30,7 @@
 }
 .featured-car__year{
     text-align: center;
-    color: rgba(110, 110, 110, 0.819);
+    color: var(--app-gray-imd);
 }
 .featured-car__price{
     display: flex;
@@ -59,7 +59,7 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 .featured-car__price > p > small{
-    color: rgba(110, 110, 110, 0.819);
+    color: var(--app-gray-mid);
 }
 @media screen and (max-width: 700px){
     .featured-car__price{

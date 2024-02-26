@@ -6,6 +6,7 @@
     min-height: 30em;
     margin: 0 auto;
     padding: 6em 10em;
+    background-color: var(--app-gray);
     color: white;
 }
 .featured__header{
@@ -20,7 +21,7 @@
     font-size: 12vw;
     font-weight: 900;
     letter-spacing: .1em;
-    color:#13131374;
+    color:rgb(37, 38, 41);
     z-index: 0;
 }
 .Featured__headline{
@@ -61,4 +62,8 @@
     }
 }
 @media screen and (max-width: 430px){
+    .featured-cars{
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        gap: 0em;
+    }
 }

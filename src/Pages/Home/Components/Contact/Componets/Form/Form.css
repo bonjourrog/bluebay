@@ -85,3 +85,13 @@
         height: 42em;
     }
 }
+@media screen and (max-width:430px) {
+    .form{
+        width: 100%;
+        padding: 2em;
+        border-radius: 0;
+    }
+    .business-info{
+        height: 15em;
+    }
+}

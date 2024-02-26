@@ -69,22 +69,22 @@
 .service:hover{
     background-color: var(--app-blue-cobalt);
 }
-.service:hover > h4::after{
+.service:hover > p::after{
     border-bottom:.1em solid white;
 }
-.service:hover > h4{
+.service:hover > p{
     margin-bottom: 2em;
     color: white;
 }
 .service:hover > .service__button{
     bottom: 2em;
 }
-.service > h4{
+.service > p{
     position: relative;
     font-size: 2.5em;
     transition: all .3s ease-in-out;
 }
-.service > h4::after{
+.service > p::after{
     content: "";
     position: absolute;
     left: 0;

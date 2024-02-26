@@ -1,6 +1,5 @@
 .featured__filter{
     display: flex;
-    /* gap: 1em; */
     padding-right: 2em;
 }
 .featured__filter > li{
@@ -11,8 +10,7 @@
     justify-content: center;
     cursor: pointer;
     overflow: hidden;
-    /* border-radius: 5em; */
-    background-color: rgb(27, 27, 27);
+    background-color: var(--app-gray);
     transition: all .3s ease-in-out;
 }
 .featured__filter > li > div{
@@ -46,5 +44,7 @@
 @media screen and (max-width: 430px){
     .featured__header{
         flex-direction: column;
+    }
+    .featured__filter > li > div{
     }
 }
