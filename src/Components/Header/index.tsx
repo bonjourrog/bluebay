@@ -49,17 +49,17 @@ const Header = () => {
                     }`}
                 >
                     <li>
-                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="fleet" smooth={true} activeClass="active-link" spy={true}>Fleet</Link>
+                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="fleet" smooth={true} activeClass="active-link" spy={true}>Flota</Link>
                         
                     </li>
                     <li>
-                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="why-us" smooth={true} activeClass="active-link" spy={true}>¿Por qué elegirnos?</Link>
+                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="why-us" smooth={true} activeClass="active-link" spy={true}>elígenos</Link>
                     </li>
                     <li>
-                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="services" smooth={true} activeClass="active-link" spy={true}>Services</Link>
+                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="services" smooth={true} activeClass="active-link" spy={true}>Servicios</Link>
                     </li>
                     <li>
-                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="contact" smooth={true} activeClass="active-link" spy={true}>Contact</Link>
+                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="contact" smooth={true} activeClass="active-link" spy={true}>Contacto</Link>
                     </li>
                 </ul>
             </nav>
