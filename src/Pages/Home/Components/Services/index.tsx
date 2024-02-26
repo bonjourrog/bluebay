@@ -1,4 +1,6 @@
 import './Services.css';
+import { IoCarSportOutline } from "react-icons/io5";
+import { GiSteeringWheel } from "react-icons/gi";
 
 const Services = ()=>{
     return <section className='Services' id='services'>
@@ -10,18 +12,18 @@ const Services = ()=>{
         <div className='Services__container'>
             <ul className='Services__list'>
                 <li className='service'>
-                    <img src='https://res.cloudinary.com/dzqoo2so5/image/upload/v1708359631/bluebay/images/ovjmmfj0zmbzzbgkyykk.svg' className='service__image' alt='icon car'/>
-                    <p>RENTA</p>
-                    <button className='service__button'>
-                        <small>MÁS INFORMACIÓN</small>
-                    </button>
+                    <IoCarSportOutline className='service__icon'/>
+                    <h6>RENTA</h6>
+                    <p className='service__details'>
+                        Si buscas autos en renta, en Blue Bay Car Rental tenemos una gran variedad de opciones para ti, con los mejores precios en la ciudad.
+                    </p>
                 </li>
                 <li className='service'>
-                    <img className='service__image' src='https://res.cloudinary.com/dzqoo2so5/image/upload/v1708364729/bluebay/images/eensafvgsiaposzd6gph.svg' alt='steering wheel icon'/>
-                    <p>CHOFER</p>
-                    <button className='service__button'>
-                        <small>MÁS INFORMACIÓN</small>
-                    </button>
+                    <GiSteeringWheel className='service__icon'/>
+                    <h6>CHOFER</h6>
+                    <p className='service__details'>
+                        En Blue Bay Car Rental comtamos con servicio de chofer en puerto peñasco
+                    </p>
                 </li>
             </ul>
         </div>

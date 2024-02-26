@@ -54,8 +54,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-direction: column;
-    justify-content: center;
     gap: 3em;
     width: 20em;
     height: 20em;
@@ -67,24 +65,26 @@
     transition: all .2s ease-in-out;
 }
 .service:hover{
+    gap: 0em;
     background-color: var(--app-blue-cobalt);
 }
-.service:hover > p::after{
+.service:hover > h6::after{
     border-bottom:.1em solid white;
 }
-.service:hover > p{
-    margin-bottom: 2em;
-    color: white;
-}
-.service:hover > .service__button{
-    bottom: 2em;
-}
-.service > p{
+.service > h6{
     position: relative;
     font-size: 2.5em;
     transition: all .3s ease-in-out;
 }
-.service > p::after{
+.service:hover > h6{
+    margin-bottom: 3em;
+    color: white;
+}
+.service:hover > .service__details{
+    color: white;
+    bottom: 3em;
+}
+.service > h6::after{
     content: "";
     position: absolute;
     left: 0;
@@ -93,26 +93,26 @@
     height: 0%;
     border-bottom:.1em solid rgb(93, 112, 174);
 }
-.service__image{
-    width: 4em;
-    object-fit: contain;
-    transform: all .3s ease-in-out;
-}
-.service__button{
-    position: absolute;
-    bottom: -7em;
-    width: 60%;
-    padding: 1em 2em;
-    font-weight: bold;
-    background-color: transparent;
-    border: .1em solid white;
-    color: white;
-    cursor: pointer;
+.service__icon{
+    font-size: 5em;
+    margin-top: .5em;
     transition: all .3s ease-in-out;
 }
-.service__button:hover{
-    background-color: white;
-    color: var(--app-blue-cobalt);
+.service:hover > .service__icon{
+    margin-top: 1;
+    font-size: 3em;
+    color: white;
+}
+.service__details{
+    position: absolute;
+    bottom: -10em;
+    width: 60%;
+    font-size: 1em !important;
+    color: var(--app-gray);
+    transition: all .3s ease-in-out;
+}
+.service:hover > .service__details{
+    bottom: 1.5em;
 }
 @media screen and (max-width:900px) {
     .Services{
@@ -129,27 +129,31 @@
     }
     .Services__list{
         grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
-        grid-template-rows: repeat(auto-fill, minmax(12em), 1fr);
+        /* grid-template-rows: repeat(auto-fill, minmax(12em), 1fr); */
         gap: 2em;
         top: -10em;
         padding: 0em 2em;
-        border: .1me solid red;
     }
     .service{
         gap: 1em;
         width: 100%;
-        height: 15em;
+        height: 18em;
     }
-    .service > h4{
-        font-size: 1em;
+    .service > h6{
+        font-size: 1.4em;
     }
-    .service > img{
-        width: 2em;
+    .service__icon{
+        margin-top: 1;
+        font-size: 3em;
+        color: var(--app-gray);
+    }
+    .service__details{
+        bottom: 1.5em;
     }
 }
 @media screen and (max-width: 430px){
     .Services{
-        height: 76em;
+        height: 63em;
     }
     .Services__header > img{
         width: 100%;
@@ -165,8 +169,8 @@
     .Services__list{
         top: -14em;
         flex-wrap: wrap;
-        gap: 2em;
-        height: 65em;
+        gap: 0em;
+        height: 45em;
     }
     .service{
         margin: 0 auto;
