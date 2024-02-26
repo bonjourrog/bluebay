@@ -39,7 +39,9 @@ const Featured = () => {
         FirebaseService.getVehicles().then(res=>{
             setVehicles(res);
             setVehiclesToShow(res);
-        }).catch(e=>{
+        }).catch(_=>{
+            console.log("error fetching data, look featured component");
+            
             
         })
     },[])
