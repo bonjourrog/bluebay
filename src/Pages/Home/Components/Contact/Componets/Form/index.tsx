@@ -30,7 +30,9 @@ const ContactForm = ()=>{
                 values, import.meta.env.VITE_FORMIK_PUBLIC_KEY)
                 .then(() => {
                     handleCloseFormMessage(true);
-            }).catch(e=>{
+            }).catch(_=>{
+                console.log("error sending image, look contact component");
+                
             });
         }
     });
