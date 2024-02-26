@@ -4,6 +4,7 @@ import "./Contact.css";
 import { Icon, LatLngExpression } from "leaflet";
 import { TiLocation } from "react-icons/ti";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
+import ContactForm from "./Componets/Form";
 
 const Contact = () => {
     const position: LatLngExpression = [
@@ -18,25 +19,7 @@ const Contact = () => {
 
     return (
         <section className="Location" id="contact">
-            <form className="form">
-                <div className="form__header">
-                    <h3 className="business-name">BLUE BAY</h3>
-                    <p className="business-city">Puerto Peñasco</p>
-                </div>
-                <label htmlFor="name">
-                    <p>Nombre</p>
-                    <input id="name" type="name" />
-                </label>
-                <label htmlFor="email">
-                    <p>Correo</p>
-                    <input id="email" type="email" />
-                </label>
-                <label htmlFor="">
-                    <p>Mensaje</p>
-                    <textarea rows={7} name="" id=""></textarea>
-                </label>
-                <button>Send</button>
-            </form>
+            <ContactForm/>
             <h2 className="location-headline">CONTACT</h2>
             <ul className="business-info">
                 <li className="busines__contact">

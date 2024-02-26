@@ -17,19 +17,6 @@
     height:calc(100% - 12em);
     border: none;
 }
-.form{
-    position: absolute;
-    top: 5em;
-    left: 6em;
-    width: 40%;
-    height: 40em;
-    padding: 4em;
-    background-color: var(--app-gray);
-    z-index: 1000;
-    border-radius: .3em;
-    color: white;
-    box-shadow: .3em -.3em 1em rgba(0, 0, 0, 0.3);
-}
 .business-info{
     position: absolute;
     bottom: 0em;
@@ -64,79 +51,17 @@
     flex-wrap: wrap;
     gap: 2em;
     width: 100%;
-    color: rgb(150, 150, 150);
+    color: var(--app-gray-light);
 }
 .busines__contact > li{
     display: flex;
     align-items: center;
     gap: .3em;
 }
-.form__header{
-    margin-bottom: 3em;
-}
-.form >label{
-    display: block;
-    margin-bottom: 1em;
-    width: 100%;
-    color: rgb(135, 135, 135);
-    font-weight: 600;
-    border-bottom: .1em solid rgba(71, 99, 238, 0.1);
-}
-.form >label >input, textarea{
-    display: block;
-    padding: 1.3em 0em;
-    width: 100%;
-    border: none;
-    outline: none;
-    color: white;
-    background-color: transparent;
-    resize: none;
-    letter-spacing: .1em;
-}
-.form > button{
-    display: block;
-    margin: 0 auto;
-    padding: 1em 7em;
-    margin-top: 3em;
-    background-color: transparent;
-    font-weight: 600;
-    color: rgb(71, 99, 238);
-    border-radius: .3em;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-}
-.form > button:hover{
-    color: white;
-    background-color: rgb(71, 99, 238);
-}
-.business-name{
-    position: relative;
-    font-size: 3em;
-}
-.business-name::before{
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: "";
-    width: 10%;
-    height: 100%;
-    border-bottom: .1em solid rgb(71, 99, 238);
-}
-.business-city{
-    margin-top: 1em;
-    font-size: 1.3em;
-    color: rgb(91, 91, 91);
-}
 @media screen and (max-width: 920px){
     .Location{
         height: 70em;
         padding-top: 30em;
-    }
-    .form{
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        height: 42em;
     }
 }
 @media screen and (max-width:430px) {
