@@ -22,10 +22,11 @@
     display: flex;
     justify-content: center;
     align-items: start;
+    margin-bottom: 1em;
     text-align: center;
     font-size: 1.3em;
-    color: var(--app-gray);
-    font-weight: 700;
+    color: white;
+    font-weight: 600;
     letter-spacing: .1em;
 }
 .featured-car__year{

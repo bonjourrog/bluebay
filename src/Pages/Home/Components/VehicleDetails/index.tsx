@@ -34,11 +34,11 @@ const VehicleDetails = () => {
                     <p className="vehicle-price">
                         ${vehicleToShow.daily_rate}
                         <small style={{ color: "gray", fontSize: ".7em" }}>
-                            /Day
+                            /Día
                         </small>
                     </p>
                     <ul className="vehicle-features">
-                        <li className="vehicle-features__headline">Features</li>
+                        <li className="vehicle-features__headline">Caracteristicas</li>
                         <li>{vehicleToShow.year}</li>
                         <li>
                             <img
@@ -67,16 +67,16 @@ const VehicleDetails = () => {
                             />
                             {vehicleToShow.passenger_capacity}
                         </li>
-                        {vehicleToShow.available ? (
-                            <li style={{ color: "rgb(82, 186, 82)" }}>
-                                Disponible
-                            </li>
-                        ) : (
-                            <li style={{ color: "rgb(186, 82, 82)" }}>
-                                No Disponible
-                            </li>
-                        )}
                     </ul>
+                    {vehicleToShow.available ? (
+                            <p className="vehicle__availability" style={{ color: "rgb(82, 186, 82)", border:".1em solid rgb(82, 186, 82)" }}>
+                                Disponible
+                            </p>
+                        ) : (
+                            <p className="vehicle__availability" style={{ color: "rgb(186, 82, 82)", border:".1em solid rgb(186, 82, 82)" }}>
+                                No Disponible
+                            </p>
+                        )}
                 </div>
             </div>
         </section>
