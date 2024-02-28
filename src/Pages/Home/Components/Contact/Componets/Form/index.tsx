@@ -25,13 +25,16 @@ const ContactForm = ()=>{
             message:""
         },
         validationSchema:ContactFormSchema,
-        onSubmit:(values)=>{
+        onSubmit:(values, {setSubmitting, resetForm})=>{
             emailjs.send(import.meta.env.VITE_FORMIK_SERVICE_ID,import.meta.env.VITE_FORMIK_TEMPLATE_ID, 
                 values, import.meta.env.VITE_FORMIK_PUBLIC_KEY)
                 .then(() => {
                     handleCloseFormMessage(true);
+                    setSubmitting(false);
+		            resetForm();
             }).catch(_=>{
                 console.log("error sending image, look contact component");
+                setSubmitting(false);
                 
             });
         }
