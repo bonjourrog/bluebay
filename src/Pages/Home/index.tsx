@@ -16,7 +16,7 @@ const Home = () => {
             <WhyUs />
             <Services/>
             <Contact />
-            <Footer />
+            <Footer DarkBg={false}/>
             <VehicleDetails />
         </div>
     );
