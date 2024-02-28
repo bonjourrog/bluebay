@@ -22,7 +22,6 @@
 }
 .Footer__message{
     margin-top: 2em;
-    color: var(--app-gray);
 }
 @media screen and (max-width: 920px){
     .Footer{
