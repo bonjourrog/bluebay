@@ -53,7 +53,7 @@ const Header = () => {
                         
                     </li>
                     <li>
-                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="why-us" smooth={true} activeClass="active-link" spy={true}>elígenos</Link>
+                        <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="why-us" smooth={true} activeClass="active-link" spy={true}>Elígenos</Link>
                     </li>
                     <li>
                         <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="services" smooth={true} activeClass="active-link" spy={true}>Servicios</Link>

@@ -20,7 +20,7 @@ const FeaturedCard: React.FC<FeaturedCardProps> = ({ vehicle }) => {
                     <li className="featured-car__name">
                         {vehicle.make} {vehicle.model}
                     </li>
-                    <li className="featured-car__year">2024</li>
+                    <li className="featured-car__year">{vehicle.year}</li>
                     <li className="featured-car__price">
                         <p>
                             ${vehicle.daily_rate}
