@@ -1,37 +1,82 @@
 import "./Search.css";
-import DatePicker from "react-datepicker";
-import { setHours, setMinutes } from "date-fns";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { DatePicker } from 'antd';
+import dayjs, {Dayjs} from 'dayjs';
+import { BiSearch } from "react-icons/bi";
+import { VehicleContext } from "../../Context/Vehicle";
+
 const Search = () => {
-    const [startDate, setStartDate] = useState(new Date());
-    const [endDate, setEndDate] = useState<Date>(new Date());
-    const handleDate = (dates: Date[]) => {
-        const [start, end] = dates;
-        setStartDate(start);
-        setEndDate(end);
-    };
+
+    const {startDate, setStartDate, endDate, setEndDate} = useContext(VehicleContext);
+    
+    let min = dayjs(new Date());
+    const {RangePicker} = DatePicker;
+    let currentTime = new Date().getHours();
+
+    const handleStartDate = (date:string[])=>{
+        const startD: Dayjs = dayjs(date[0]);
+        const endD: Dayjs = dayjs(date[1]);
+
+        setStartDate(startD);
+        if(startD.get("date") == endD.get("date")){
+            setEndDate(endD.add(1, 'day'));
+            return
+        }
+        setEndDate(endD);
+    }
+
+    const range = (start:number, end:number): number[] =>{
+        const result = [];
+        for (let i = start; i < end; i++) {
+            result.push(i);
+        }
+        return result;
+    }
+
+    function disabledRangeTime(date:Dayjs, type?:string) {
+        return {
+            disabledHours: () => {
+                
+                let hoursAvailability:number[]
+
+                if((currentTime>8  && currentTime <=18) && startDate.get("date") === dayjs(new Date()).get("date")){
+                    hoursAvailability = range(0, currentTime+1).concat(range(19,24));
+                }else{
+                    hoursAvailability = range(0, 8).concat(range(19,24))
+                }
+
+                return hoursAvailability
+            }
+        }
+    }
+
+    useEffect(()=>{
+        if(currentTime >= 18){
+            setStartDate(startDate.add(1, "day"))
+
+        }
+    },[])
     return (
         <div className="Search">
-            <DatePicker
+            <RangePicker
+                allowEmpty={false}
+                allowClear={false}
+                minDate={min}
                 className="date-picker"
-                selected={startDate}
-                startDate={startDate}
-                endDate={endDate}
-                // filterTime={()=>handleTime}
-                popperClassName="date-picker__popper"
-                onChange={(dates) => handleDate(dates as unknown as Date[])}
-                showTimeSelect
-                excludeTimes={[
-                    setHours(setMinutes(new Date(), 0), 0),
-                    setHours(setMinutes(new Date(), 1), 0),
-                    // setHours(setMinutes(new Date(), 30), 18),
-                    // setHours(setMinutes(new Date(), 30), 19),
-                    // setHours(setMinutes(new Date(), 30), 17),
-                ]}
-                dateFormat="MMMM d, yyyy h:mm aa"
-                selectsRange
-                // inline
+                value={[startDate, endDate]}
+                defaultValue={[startDate, endDate]}
+                onChange={(_, dateString)=>handleStartDate(dateString)}
             />
+            <DatePicker 
+                format={"HH:mm"} 
+                minuteStep={10} 
+                disabledTime={disabledRangeTime} 
+                picker="time" 
+                showNow={false}
+                className="time-picker"/>
+            <div className="search-button">
+                <BiSearch size={30}/>
+            </div>
         </div>
     );
 };

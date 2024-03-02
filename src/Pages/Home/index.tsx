@@ -7,6 +7,7 @@ import Services from "./Components/Services";
 import VehicleDetails from "./Components/VehicleDetails";
 import WhyUs from "./Components/WhyUs";
 import "./Home.css";
+
 const Home = () => {
     return (
         <div className="Home">

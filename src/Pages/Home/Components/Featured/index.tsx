@@ -1,4 +1,3 @@
-import "react-datepicker/dist/react-datepicker.css";
 import { useContext, useEffect, useState } from "react";
 import "./Featured.css";
 import { Vehicle } from "../../../../Entity/Vehicle";
@@ -7,6 +6,7 @@ import Filters from "./Components/Filters";
 import { Filter } from "../../../../Entity/Filter";
 import { VehicleContext } from "../../../../Context/Vehicle";
 import { FirebaseService } from "../../../../controller/FirebaseController";
+import Search from "../../../../Components/Search";
 
 const Featured = () => {
     const { vehicles, setVehicles } = useContext(VehicleContext);
@@ -52,6 +52,7 @@ const Featured = () => {
 
     return (
         <section className="Featured" id="fleet">
+            <Search/>
             <section className="featured__header">
                 <h2 className="Featured__headline">Conoce nuestra flota</h2>
                 <Filters setFilter={setFilter} filter={filter} />
