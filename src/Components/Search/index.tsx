@@ -1,9 +1,10 @@
 import "./Search.css";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { DatePicker } from 'antd';
 import dayjs, {Dayjs} from 'dayjs';
 import { BiSearch } from "react-icons/bi";
 import { VehicleContext } from "../../Context/Vehicle";
+import { Link } from "react-router-dom";
 
 const Search = () => {
 
@@ -18,7 +19,7 @@ const Search = () => {
         const endD: Dayjs = dayjs(date[1]);
 
         setStartDate(startD);
-        if(startD.get("date") == endD.get("date")){
+        if(startD.get("month") == endD.get("month") && startD.get("date") == endD.get("date")){
             setEndDate(endD.add(1, 'day'));
             return
         }
@@ -74,9 +75,9 @@ const Search = () => {
                 picker="time" 
                 showNow={false}
                 className="time-picker"/>
-            <div className="search-button">
-                <BiSearch size={30}/>
-            </div>
+            <Link to={"/results"} className="search-button">
+                <BiSearch color="white" size={30}/>
+            </Link>
         </div>
     );
 };
