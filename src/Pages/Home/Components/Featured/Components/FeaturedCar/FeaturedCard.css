@@ -1,0 +1,69 @@
+.featured-car{
+    width: 100%;
+    margin-top: 5em;
+    padding: 0em 3em;
+    z-index: 20;
+}
+.features-car__image{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 10em;
+    overflow: hidden;
+}
+.features-car__image > img{
+    width: 100%;
+    object-fit: cover;
+}
+.featured-car__name{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 1.3em;
+    color: white;
+    font-weight: 600;
+    letter-spacing: .1em;
+}
+.featured-car__year{
+    text-align: center;
+    color: var(--app-gray-imd);
+}
+.featured-car__price{
+    display: flex;
+    justify-content: space-between;
+    padding: 0em 2em;
+    font-weight: 600;
+    color: var(--app-blue-cobalt);
+}
+.see-more{
+    padding: .2em 1em;
+    letter-spacing: .1em;
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(217, 230, 255);
+    border: .1em solid transparent;
+    background-color: var(--app-blue-cobalt);
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.see-more:hover{
+    background-color: transparent;
+    /* color: rgb(90, 146, 250); */
+    color: .1em solid var(--app-blue-cobalt);
+    border: .1em solid var(--app-blue-cobalt);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.featured-car__price > p > small{
+    color: var(--app-gray-mid);
+}
+@media screen and (max-width: 700px){
+    .featured-car__price{
+        padding: 2em 7vw;
+    }
+}

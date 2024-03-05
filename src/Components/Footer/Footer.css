@@ -1,0 +1,30 @@
+.Footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    min-height: 20em;
+    padding: 2em 12em;
+}
+.Footer__logo{
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--app-blue-cobalt);
+}
+.Footer__socials{
+    display: flex;
+    gap: 1em;
+}
+.business__social-icon{
+    color:#e4e4e4;
+}
+.Footer__message{
+    margin-top: 2em;
+}
+@media screen and (max-width: 920px){
+    .Footer{
+        padding: 2em 3em;
+    }
+}

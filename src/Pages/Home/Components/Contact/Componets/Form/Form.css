@@ -1,0 +1,97 @@
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 2em;
+    left: 6em;
+    width: 40%;
+    height: 50em;
+    padding: 4em;
+    background-color: var(--app-gray);
+    z-index: 1000;
+    border-radius: .3em;
+    color: white;
+    box-shadow: .3em -.3em 1em rgba(0, 0, 0, 0.3);
+}
+.form__header{
+    margin-bottom: 3em;
+}
+.business-name{
+    position: relative;
+    font-size: 3em;
+}
+.business-name::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 10%;
+    height: 100%;
+    border-bottom: .1em solid rgb(71, 99, 238);
+}
+.business-city{
+    margin-top: 1em;
+    font-size: 1.3em;
+    color: rgb(111, 111, 111);
+}
+.form >label{
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+    color: var(--app-gray-light);
+    font-weight: 600;
+    border-bottom: .1em solid rgba(71, 99, 238, 0.1);
+}
+.form >label >input, textarea{
+    display: block;
+    padding: 1.3em 0em;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    resize: none;
+    letter-spacing: .1em;
+}
+.form > button{
+    display: block;
+    margin: 0 auto;
+    padding: 1em 7em;
+    margin-top: 3em;
+    background-color: transparent;
+    font-weight: 600;
+    color: var(--app-blue-cobalt);
+    border:.1em solid var(--app-blue-cobalt);
+    border-radius: .3em;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.form > button:hover{
+    color: white;
+    background-color: var(--app-blue-cobalt);
+}
+.form > label > .expandable{
+    color: rgb(166, 71, 71) !important;
+    font-size: .8em;
+    font-weight: 400 !important;
+}
+@media screen and (max-width: 920px){
+    .form{
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 42em;
+    }
+}
+@media screen and (max-width:430px) {
+    .form{
+        width: 100%;
+        padding: 2em;
+        border-radius: 0;
+    }
+    .business-info{
+        height: 15em;
+    }
+}

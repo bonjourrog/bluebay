@@ -1,0 +1,16 @@
+.results{
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.results__list{
+    width: 100%;
+    padding: 4em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    gap: 1em;
+}
+.results >h1 {
+    text-align: center;
+}

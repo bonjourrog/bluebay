@@ -1,0 +1,141 @@
+.Vehicle-Details{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    z-index: 1001;
+    transition: all .3s ease-in-out;
+    box-shadow: -.3em .3em 1em rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.details{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+    height: 100%;
+    padding: 2em;
+    background-color: var(--app-gray);
+    box-shadow: 0em -.3em 1em rgba(0, 0, 0, 0.2);
+    z-index: 11;
+}
+.vehicle__photos{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-top: 3em;
+    width: 100%;
+    height: 100%;
+}
+.photo-to-show{
+    display: flex;
+    justify-self: center;
+    width:100%;
+}
+.photo-to-show>img{
+    width: 100%;
+    object-fit: contain;
+}
+.details-list{
+    width: 100%;
+    height: 100%;
+    padding: 1em 2em;
+}
+.details-list .vehicle__name{
+    position: relative;
+    display: inline;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+.vehicle-price{
+    margin-top: .4em;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(90, 146, 250);
+}
+.isVehicleSport{
+    position: absolute;
+    right: -5em;
+    padding: 0em .7em;
+    font-size: .5em;
+    border: .1em solid rgb(90, 146, 250);
+    border-radius: 3em;
+}
+.vehicle-features{
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(4, 1fr);
+    min-height: 6em;
+    margin-top: 2em;
+    color: white; 
+}
+.vehicle-features > li{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: .3em;
+    grid-column: span 1;
+    width: 100%;
+    height: 100%;
+}
+.vehicle-features__headline{
+    justify-content: start !important;
+    grid-column: span 4 !important;
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+}
+.vehicle__availability{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 3em;
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5em;
+}
+.features-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+    padding: 0em 2em;
+}
+.details-opened{
+    width: 30em;
+}
+.details-closed{
+    width: 0em;
+}
+.close-details{
+    margin-top: 2em;
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+}
+@media screen and (max-width:700px) {
+    .details-opened{
+        width: 100%;
+        padding: 0;
+    }
+    .details{
+        width: 100%;
+    }
+    .details-list{
+        width: 100%;
+        padding: 0;
+    }
+}

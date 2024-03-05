@@ -1,0 +1,50 @@
+.featured__filter{
+    display: flex;
+    padding-right: 2em;
+}
+.featured__filter > li{
+    position: relative;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: var(--app-gray);
+    transition: all .3s ease-in-out;
+}
+.featured__filter > li > div{
+    position: absolute;
+    top: 0;
+    left: .5em;
+    display: flex;
+    align-items: center;
+    gap: .8em;
+    width: 8em;
+    height: 100%;
+}
+.featured__filter > li:hover{
+    color: rgb(117, 156, 227) !important;
+}
+.featured__filter > li > img{
+    width: 1.3em;
+    height: 1.3em;
+}
+@media screen and (max-width: 920px){
+    .featured__filter{
+        padding: 0;
+        justify-content: end;
+    }
+}
+@media screen and (max-width: 700px){
+    .featured__filter{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 430px){
+    .featured__header{
+        flex-direction: column;
+    }
+    .featured__filter > li > div{
+    }
+}
