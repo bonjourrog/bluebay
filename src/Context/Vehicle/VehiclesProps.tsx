@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, SetStateAction } from "react";
 import { Vehicle } from "../../Entity/Vehicle";
 import { Dayjs } from "dayjs";
 
@@ -17,4 +17,6 @@ export interface ContextValue {
     setStartDate: React.Dispatch<React.SetStateAction<Dayjs>>;
     endDate: Dayjs;
     setEndDate: React.Dispatch<React.SetStateAction<Dayjs>>;
+    currentTime: any;
+    setCurrentTime: React.Dispatch<SetStateAction<any>>;
 }

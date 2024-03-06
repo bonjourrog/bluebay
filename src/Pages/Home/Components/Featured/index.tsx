@@ -52,7 +52,9 @@ const Featured = () => {
 
     return (
         <section className="Featured" id="fleet">
-            <Search/>
+            <div className="Featured__search">
+                <Search showSearchBtn={true}/>
+            </div>
             <section className="featured__header">
                 <h2 className="Featured__headline">Conoce nuestra flota</h2>
                 <Filters setFilter={setFilter} filter={filter} />

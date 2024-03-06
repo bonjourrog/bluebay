@@ -7,6 +7,7 @@ import { Vehicle } from '../../Entity/Vehicle';
 import VehicleCard from '../../Components/VehicleCard';
 import Search from '../../Components/Search';
 import Footer from '../../Components/Footer';
+import Hero from '../Home/Components/Hero';
 
 const Results = ()=>{
     const {startDate, endDate, vehicles} = useContext(VehicleContext);
@@ -22,7 +23,6 @@ const Results = ()=>{
             days.push(currentDate);
             currentDate = currentDate.add(1, "day");
         }
-
         return days;
     }
 
@@ -31,22 +31,34 @@ const Results = ()=>{
         setVehicleList(vehicles.filter(vehicle => vehicle.available));
         console.log(vehicleList);
 
-    }, []);
+    }, [endDate]);
 
     return <div className='results'>
-        <Header/>
-        <div style={{marginTop:"5em"}}></div>
-        <h1>Elije la mejor copcion que se adapte a tus necesidades</h1>
-        <div style={{marginTop:"10em"}}></div>
-        <Search/>
+        <Header showNavbar={false}/>
+        <Hero message={""} height="50vh"/>
+        <div className='space'></div>
+        <div className='results__info'>
+            <p>Aprobecha nuestras ofertas</p>
+            <ul className='results__offers'>
+                <li className='offer'>
+                    <span>30%</span>
+                    <p>Obten un 30% de descuento al reservar desde 1 semana</p>
+                </li>
+                <li className='offer'>
+                    <span>40%</span>
+                    <p>Obten un 40% de descuetno al reservar desde 1 mes</p>
+                </li>
+            </ul>
+        </div>
+
         <ul className='results__list'>
+        <Search showSearchBtn={false}/>
         {
             vehicleList.map((vehicle:Vehicle)=>(
                 <VehicleCard key={vehicle.id} vehicle={vehicle} date_range={dateRange}/>
             ))
         }
         </ul>
-        
         <Footer DarkBg/>
     </div>
 }

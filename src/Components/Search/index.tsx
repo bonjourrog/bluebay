@@ -1,18 +1,19 @@
 import "./Search.css";
-import { useContext, useEffect } from "react";
 import { DatePicker } from 'antd';
 import dayjs, {Dayjs} from 'dayjs';
-import { BiSearch } from "react-icons/bi";
+import { useContext, useEffect } from "react";
 import { VehicleContext } from "../../Context/Vehicle";
+import { BiSearch } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { SearchProps } from "./Search.props";
 
-const Search = () => {
+const Search:React.FC<SearchProps> = ({showSearchBtn}) => {
 
-    const {startDate, setStartDate, endDate, setEndDate} = useContext(VehicleContext);
+    const {startDate, setStartDate, endDate, setEndDate, currentTime, setCurrentTime} = useContext(VehicleContext);
     
-    let min = dayjs(new Date());
+    let min: Dayjs = dayjs(new Date());
     const {RangePicker} = DatePicker;
-    let currentTime = new Date().getHours();
+    let _currentTime = new Date().getHours();
 
     const handleStartDate = (date:string[])=>{
         const startD: Dayjs = dayjs(date[0]);
@@ -37,24 +38,24 @@ const Search = () => {
     function disabledRangeTime(date:Dayjs, type?:string) {
         return {
             disabledHours: () => {
-                
-                let hoursAvailability:number[]
-
-                if((currentTime>8  && currentTime <=18) && startDate.get("date") === dayjs(new Date()).get("date")){
-                    hoursAvailability = range(0, currentTime+1).concat(range(19,24));
+                let hoursAvailability:number[];
+                if((_currentTime>8  && _currentTime <=18) && startDate.get("date") === dayjs(new Date()).get("date")){
+                    hoursAvailability = range(0, _currentTime+1).concat(range(19,24));
                 }else{
                     hoursAvailability = range(0, 8).concat(range(19,24))
                 }
-
                 return hoursAvailability
             }
         }
     }
 
-    useEffect(()=>{
-        if(currentTime >= 18){
-            setStartDate(startDate.add(1, "day"))
+    const handleTime= ( time: string | string[])=>{
+        setCurrentTime(time)
+    }
 
+    useEffect(()=>{
+        if(_currentTime >= 18){
+            setStartDate(startDate.add(1, "day"));
         }
     },[])
     return (
@@ -72,14 +73,24 @@ const Search = () => {
                 format={"HH:mm"} 
                 minuteStep={10} 
                 disabledTime={disabledRangeTime} 
+                value={currentTime}
+                onChange={(time)=>handleTime(time)}
                 picker="time" 
                 showNow={false}
                 className="time-picker"/>
-            <Link to={"/results"} className="search-button">
-                <BiSearch color="white" size={30}/>
-            </Link>
+                {
+                    showSearchBtn
+                    ?
+                    (<Link to={"/results"} className="search-button">
+                        <BiSearch color="white" size={30}/>
+                    </Link>)
+                    :
+                    undefined
+                }
         </div>
     );
 };
+
+
 
 export default Search;

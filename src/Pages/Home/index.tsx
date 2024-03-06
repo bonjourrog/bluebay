@@ -11,8 +11,8 @@ import "./Home.css";
 const Home = () => {
     return (
         <div className="Home">
-            <Header />
-            <Hero />
+            <Header showNavbar={true}/>
+            <Hero message="Tu próximo destino te espera" height="100vh"/>
             <Featured />
             <WhyUs />
             <Services/>

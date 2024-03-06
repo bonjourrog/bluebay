@@ -11,6 +11,7 @@ export const VehicleProvider: React.FC<VehicleProviderProps> = ({
     const [vehicles, setVehicles] = useState<Vehicle[]>([]);
     const [isDetailsOpen, setIsDetailsOpen] = useState<boolean>(false);
     const [vehicleToShow, setVehicleToShow] = useState<Vehicle>({} as Vehicle);
+    const [currentTime, setCurrentTime] = useState<any>(null)
 
     const [startDate, setStartDate] = useState<Dayjs>(dayjs(new Date()));
     const [endDate, setEndDate] = useState<Dayjs>(dayjs(new Date().getTime()+86400000));
@@ -27,7 +28,9 @@ export const VehicleProvider: React.FC<VehicleProviderProps> = ({
                 startDate,
                 setStartDate,
                 endDate,
-                setEndDate
+                setEndDate,
+                currentTime,
+                setCurrentTime
             }}
         >
             {children}

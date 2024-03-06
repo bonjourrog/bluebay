@@ -1,8 +1,9 @@
 import "./Hero.css";
+import { HeroProps } from "./Hero.props";
 
-const Hero = () => {
+const Hero: React.FC<HeroProps> = ({message, height}) => {
     return (
-        <section className="hero">
+        <section className="hero" style={{height: height}}>
             <div className="hero__image">
                 <img
                     src="https://res.cloudinary.com/dzqoo2so5/image/upload/v1708315925/bluebay/images/pfv4x9zrwgaxaccz8fxw.jpg"
@@ -11,17 +12,9 @@ const Hero = () => {
             </div>
             <div className="hero__headlines">
                 <h1 className="hero__tagline hero__headline">
-                    Tu próximo destino te espera
-                    {/* Unleash the Journey <br />
-                    Embrace the Experience */}
+                    {message}
                 </h1>
-                {/* <p className="hero__introduction hero__headline">
-                    Step into a world where your desires set the course.
-                </p> */}
             </div>
-            {/* <div className="hero__button">
-                <button className="button">Explore Vehicles</button>
-            </div> */}
         </section>
     );
 };
