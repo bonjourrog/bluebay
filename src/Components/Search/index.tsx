@@ -35,7 +35,7 @@ const Search:React.FC<SearchProps> = ({showSearchBtn}) => {
         return result;
     }
 
-    function disabledRangeTime(date:Dayjs, type?:string) {
+    function disabledRangeTime() {
         return {
             disabledHours: () => {
                 let hoursAvailability:number[];
