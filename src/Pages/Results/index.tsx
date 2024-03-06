@@ -8,6 +8,7 @@ import VehicleCard from '../../Components/VehicleCard';
 import Search from '../../Components/Search';
 import Footer from '../../Components/Footer';
 import Hero from '../Home/Components/Hero';
+import Contract from '../../Components/Contract';
 
 const Results = ()=>{
     const {startDate, endDate, vehicles} = useContext(VehicleContext);
@@ -34,6 +35,7 @@ const Results = ()=>{
     }, [endDate]);
 
     return <div className='results'>
+        <Contract/>
         <Header showNavbar={false}/>
         <Hero message={""} height="50vh"/>
         <div className='space'></div>

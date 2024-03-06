@@ -1,0 +1,19 @@
+.contract{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 60%;
+    padding: 3em;
+    background-color: white;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+    box-shadow: .3em .3em 1em rgba(0, 0, 0, 0.1);
+    border-radius: .3em;
+}
+.contract__steps{
+    height: 100%;
+    border:.1em solid red;
+}
