@@ -5,11 +5,19 @@ import { PiMoneyBold } from "react-icons/pi";
 import { MdCameraswitch } from "react-icons/md";
 import { GiGearStickPattern } from "react-icons/gi";
 import { MdReduceCapacity } from "react-icons/md";
-
-
-
+import { useContext } from 'react';
+import { VehicleContext } from '../../Context/Vehicle';
 
 const VehicleCard: React.FC<VehicleProps> = ({vehicle, date_range})=>{
+    const {setShowContractForm, setVehicleToShow} = useContext(VehicleContext);
+
+    const handleClick = ()=>{
+        setShowContractForm(true)
+        setVehicleToShow(vehicle)
+        console.log(vehicle);
+        
+    }
+
     return <li className="vehicle">
         <img className='vheicle__image' src={vehicle.image} alt="" />
         <div className='vehicle__info'>
@@ -23,7 +31,7 @@ const VehicleCard: React.FC<VehicleProps> = ({vehicle, date_range})=>{
         </div>
         <div className='vehicle__total'>
             <p className='vehicle__price'>${vehicle.daily_rate * date_range}</p>
-            <button className='vehicle__btn'>Agendar</button>
+            <button onClick={handleClick} className='vehicle__btn'>Agendar</button>
         </div>
     </li>;
 }

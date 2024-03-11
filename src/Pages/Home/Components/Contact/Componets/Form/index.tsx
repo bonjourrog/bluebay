@@ -31,7 +31,7 @@ const ContactForm = ()=>{
                 .then(() => {
                     handleCloseFormMessage(true);
                     setSubmitting(false);
-		            resetForm();
+                    resetForm();
             }).catch(_=>{
                 console.log("error sending image, look contact component");
                 setSubmitting(false);

@@ -1,5 +1,6 @@
 import { ReactNode, SetStateAction } from "react";
 import { Vehicle } from "../../Entity/Vehicle";
+import { Contract } from "../../Entity/Contract";
 import { Dayjs } from "dayjs";
 
 export interface VehicleProviderProps {
@@ -19,4 +20,8 @@ export interface ContextValue {
     setEndDate: React.Dispatch<React.SetStateAction<Dayjs>>;
     currentTime: any;
     setCurrentTime: React.Dispatch<SetStateAction<any>>;
+    showContractForm:boolean;
+    setShowContractForm:React.Dispatch<SetStateAction<boolean>>;
+    contract: Contract;
+    setContract: React.Dispatch<SetStateAction<Contract>>;
 }

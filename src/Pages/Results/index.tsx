@@ -17,9 +17,7 @@ const Results = ()=>{
     const days: Dayjs[] = [];
     
     function calculateDays ():Dayjs[]{
-        
         let currentDate: Dayjs = startDate;
-
         while(currentDate.isBefore(endDate)){
             days.push(currentDate);
             currentDate = currentDate.add(1, "day");
