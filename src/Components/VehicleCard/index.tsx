@@ -14,8 +14,6 @@ const VehicleCard: React.FC<VehicleProps> = ({vehicle, date_range})=>{
     const handleClick = ()=>{
         setShowContractForm(true)
         setVehicleToShow(vehicle)
-        console.log(vehicle);
-        
     }
 
     return <li className="vehicle">
@@ -30,7 +28,15 @@ const VehicleCard: React.FC<VehicleProps> = ({vehicle, date_range})=>{
             </ul>
         </div>
         <div className='vehicle__total'>
-            <p className='vehicle__price'>${vehicle.daily_rate * date_range}</p>
+            {
+                date_range < 7 ? <p className='vehicle__price'>${vehicle.daily_rate * date_range}</p> : undefined
+            }
+            {
+                date_range >= 7 && date_range <30 ? <p className='vehicle__price'>${(vehicle.daily_rate * date_range)-((vehicle.daily_rate * date_range)*.3)}</p>: undefined
+            }
+            {
+                date_range >= 30 ? <p className='vehicle__price'>${(vehicle.daily_rate * date_range)-((vehicle.daily_rate * date_range)*.4)}</p> : undefined
+            }
             <button onClick={handleClick} className='vehicle__btn'>Agendar</button>
         </div>
     </li>;
