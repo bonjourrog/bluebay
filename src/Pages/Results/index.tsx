@@ -28,7 +28,6 @@ const Results = ()=>{
     useEffect(()=>{
         setDateRange( calculateDays().length);
         setVehicleList(vehicles.filter(vehicle => vehicle.available));
-        console.log(vehicles);
 
     }, [endDate]);
 

@@ -1,10 +1,9 @@
 import './Contract.css';
 import { Steps } from 'antd';
 import { ContractProps } from './Contrac.props';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { SmileOutlined } from '@ant-design/icons';
 import { VehicleContext } from '../../Context/Vehicle';
-import { IoIosCloseCircle } from "react-icons/io";
 import { useFormik } from 'formik';
 import { ContactSchema } from './Contract.schema';
 import emailjs from '@emailjs/browser';
@@ -13,6 +12,7 @@ const Contract: React.FC<ContractProps> = ()=>{
     const [current, setCurrent] = useState<number>(0);
     const {showContractForm, setShowContractForm, vehicleToShow, startDate, endDate} = useContext(VehicleContext);
     const [message, setMessage] = useState<any>({});
+    const [appWidth, setAppWidth] = useState(0)
     const steps = [
         {
             title: 'Datos personal',
@@ -52,11 +52,9 @@ const Contract: React.FC<ContractProps> = ()=>{
             subject:"Solicitud de Contrato",
             replay_to:"",
             message:"",
-
         },
         validationSchema:ContactSchema,
         onSubmit:(values, {setSubmitting, resetForm})=>{
-            console.log("Valore ", values );
             values.from_name = values.full_name;
             values.message = `
                 Nombre: ${values.full_name}
@@ -90,13 +88,26 @@ const Contract: React.FC<ContractProps> = ()=>{
             setMessage(formik.values);
     }
 
+    const handleWidth = ()=>{
+        setAppWidth(window.innerWidth)
+    }
+
+    useEffect(()=>{
+        setCurrent(0)
+    }, [])
+
+    useEffect(()=>{
+        window.addEventListener('resize', handleWidth)
+        return ()=>{
+            window.removeEventListener('resize', handleWidth)
+        }
+    } ,[appWidth])
+
     return <section
-        style={{display:showContractForm ? 'grid' : 'none' }}
-        className='contract'>
-            <IoIosCloseCircle  size={30} onClick={()=>setShowContractForm(false)} style={{position:"absolute", right:"-.5em", top:"-.5em", cursor:"pointer"}}/>
+        className={`contract ${showContractForm ? 'contract--show' : 'contract--hide'}`}>
         <Steps
             className='contract__steps'
-            direction='vertical'
+            direction={`${appWidth>800 ? 'vertical' : 'horizontal'}`}
             current={current}
             onChange={(val)=>setCurrent(val)}
             items={steps}
@@ -207,6 +218,7 @@ const Contract: React.FC<ContractProps> = ()=>{
                 {
                     current > 0 && (<button className='steps-btn' onClick={()=>setCurrent(prevVal => prevVal = prevVal-1)}>Atras</button>)
                 }
+                <button  onClick={()=>setShowContractForm(false)} className='steps-btn steps-btn--cancel'>Cancelar</button>
             </div>
             </form>
         </section>
