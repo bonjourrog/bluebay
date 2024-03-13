@@ -10,7 +10,7 @@ import emailjs from '@emailjs/browser';
 
 const Contract: React.FC<ContractProps> = ()=>{
     const [current, setCurrent] = useState<number>(0);
-    const {showContractForm, setShowContractForm, vehicleToShow, startDate, endDate} = useContext(VehicleContext);
+    const {showContractForm, setShowContractForm, vehicleToShow, startDate, endDate, setShowDialog} = useContext(VehicleContext);
     const [message, setMessage] = useState<any>({});
     const [appWidth, setAppWidth] = useState(0)
     const steps = [
@@ -76,6 +76,8 @@ const Contract: React.FC<ContractProps> = ()=>{
                     setSubmitting(false);
                     resetForm();
                     setCurrent(0);
+                    setShowContractForm(false)
+                    setShowDialog(true);
             }).catch(_=>{
                 console.log("error sending image, look contact component");
                 setSubmitting(false);

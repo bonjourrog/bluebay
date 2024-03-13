@@ -9,9 +9,10 @@ import Search from '../../Components/Search';
 import Footer from '../../Components/Footer';
 import Hero from '../Home/Components/Hero';
 import Contract from '../../Components/Contract';
+import Dialog from '../../Components/Dialog';
 
 const Results = ()=>{
-    const {startDate, endDate, vehicles} = useContext(VehicleContext);
+    const {startDate, endDate, vehicles, showDialog} = useContext(VehicleContext);
     const [vehicleList, setVehicleList] = useState<Vehicle[]>([]);
     const [dateRange, setDateRange] = useState<number>(0);
     const days: Dayjs[] = [];
@@ -28,10 +29,12 @@ const Results = ()=>{
     useEffect(()=>{
         setDateRange( calculateDays().length);
         setVehicleList(vehicles.filter(vehicle => vehicle.available));
-
     }, [endDate]);
 
     return <div className='results'>
+        {
+            showDialog ? <Dialog/> : undefined
+        }
         <Contract/>
         <Header showNavbar={false}/>
         <Hero message={""} height="50vh"/>

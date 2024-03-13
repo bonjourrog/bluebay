@@ -24,4 +24,6 @@ export interface ContextValue {
     setShowContractForm:React.Dispatch<SetStateAction<boolean>>;
     contract: Contract;
     setContract: React.Dispatch<SetStateAction<Contract>>;
+    showDialog: boolean;
+    setShowDialog: React.Dispatch<SetStateAction<boolean>>;
 }
