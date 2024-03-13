@@ -79,7 +79,7 @@ const Search:React.FC<SearchProps> = ({showSearchBtn}) => {
                 showNow={false}
                 className="time-picker"/>
                 {
-                    showSearchBtn
+                    showSearchBtn && currentTime !== null
                     ?
                     (<Link to={"/results"} className="search-button">
                         <BiSearch color="white" size={30}/>
