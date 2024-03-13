@@ -27,8 +27,11 @@ const Results = ()=>{
     }
 
     useEffect(()=>{
-        setDateRange( calculateDays().length);
-        setVehicleList(vehicles.filter(vehicle => vehicle.available));
+        setVehicleList(JSON.parse(window.localStorage.getItem('vehicles') as string))
+    },[])
+
+    useEffect(()=>{
+        setDateRange( calculateDays().length);        
     }, [endDate]);
 
     return <div className='results'>

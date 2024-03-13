@@ -9,7 +9,7 @@ import { SearchProps } from "./Search.props";
 
 const Search:React.FC<SearchProps> = ({showSearchBtn}) => {
 
-    const {startDate, setStartDate, endDate, setEndDate, currentTime, setCurrentTime} = useContext(VehicleContext);
+    const {startDate, setStartDate, endDate, setEndDate, currentTime, setCurrentTime, vehicles} = useContext(VehicleContext);
     
     let min: Dayjs = dayjs(new Date());
     const {RangePicker} = DatePicker;
@@ -42,15 +42,20 @@ const Search:React.FC<SearchProps> = ({showSearchBtn}) => {
                 if((_currentTime>8  && _currentTime <=18) && startDate.get("date") === dayjs(new Date()).get("date")){
                     hoursAvailability = range(0, _currentTime+1).concat(range(19,24));
                 }else{
-                    hoursAvailability = range(0, 8).concat(range(19,24))
+                    hoursAvailability = range(0, 8).concat(range(19,24));
                 }
-                return hoursAvailability
+                return hoursAvailability;
             }
         }
     }
 
     const handleTime= ( time: string | string[])=>{
-        setCurrentTime(time)
+        setCurrentTime(time);
+    }
+
+    const handleVehicles = ()=>{
+        const vehiclesList = vehicles.filter(vehicle => vehicle.available);
+        window.localStorage.setItem('vehicles', JSON.stringify(vehiclesList));
     }
 
     useEffect(()=>{
@@ -81,7 +86,7 @@ const Search:React.FC<SearchProps> = ({showSearchBtn}) => {
                 {
                     showSearchBtn && currentTime !== null
                     ?
-                    (<Link to={"/results"} className="search-button">
+                    (<Link  to={"/results"} onClick={handleVehicles} className="search-button">
                         <BiSearch color="white" size={30}/>
                     </Link>)
                     :
