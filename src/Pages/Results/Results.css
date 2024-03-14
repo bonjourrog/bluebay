@@ -7,6 +7,7 @@
     width: 100%;
     gap: 4em;
     padding: 0em 10em;
+    margin-bottom: 10em;
 }
 .results >h1 {
     text-align: center;

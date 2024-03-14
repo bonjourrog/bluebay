@@ -12,7 +12,7 @@ import Contract from '../../Components/Contract';
 import Dialog from '../../Components/Dialog';
 
 const Results = ()=>{
-    const {startDate, endDate, vehicles, showDialog} = useContext(VehicleContext);
+    const {startDate, endDate, showDialog} = useContext(VehicleContext);
     const [vehicleList, setVehicleList] = useState<Vehicle[]>([]);
     const [dateRange, setDateRange] = useState<number>(0);
     const days: Dayjs[] = [];
