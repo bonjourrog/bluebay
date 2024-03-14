@@ -58,6 +58,9 @@
     align-items: center;
     gap: .3em;
 }
+.icon{
+    border-radius: .3em;
+}
 @media screen and (max-width: 920px){
     .Location{
         height: 70em;

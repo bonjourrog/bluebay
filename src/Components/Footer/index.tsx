@@ -7,7 +7,7 @@ import { FooterProps } from "./Footer.props";
 const Footer:React.FC<FooterProps> = ({DarkBg}) => {
     return (
         <footer className="Footer" style={{backgroundColor:DarkBg?'var(--app-gray)':'white'}}>
-            <p className="Footer__logo">BLUEBAY</p>
+            <img className="Footer__logo" src="https://res.cloudinary.com/dzqoo2so5/image/upload/v1710458787/bluebay/images/logo/imozuqakjg9wfju3ym4v.png" />
             <p className="Footer__message" style={{color:DarkBg?'white':'var(--app-gray)'}}>Siguenos en redes sociales</p>
             <div className="Footer__socials">
                 <a target="_blank" href="https://www.facebook.com/profile.php?id=61555585719547">

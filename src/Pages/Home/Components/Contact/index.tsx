@@ -12,9 +12,9 @@ const Contact = () => {
     ];
 
     const newIcon = new Icon({
-        iconUrl:
-            "https://img.freepik.com/free-photo/vertical-low-angle-shot-high-rise-building-glass-facade-clear-sky_181624-6151.jpg?w=360&t=st=1706812836~exp=1706813436~hmac=e0c8044e11da2357545f80b6735e725790693324aab3795c537b90799cf38794",
+        iconUrl:"https://res.cloudinary.com/dzqoo2so5/image/upload/v1708627618/bluebay/images/z1yqutc6dlgvfuyaa1hb.jpg",
         iconSize: [80, 80],
+        className:"icon"
     });
 
     return (

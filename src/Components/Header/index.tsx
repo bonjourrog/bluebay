@@ -27,9 +27,6 @@ const Header:React.FC<HeaderProps> = ({showNavbar}) => {
             <nav
                 style={{
                     height: scrolling ? "4em" : "6em",
-                    backgroundColor: scrolling
-                        ? "rgba(255, 255, 255, 0.96)"
-                        : "rgba(255, 255, 255, 0.901)",
                 }}
                 className="nav"
             >
@@ -37,7 +34,8 @@ const Header:React.FC<HeaderProps> = ({showNavbar}) => {
                     style={{ fontSize: scrolling ? "1em" : "" , margin:showNavbar?"0":"0 auto"}}
                     className="logo"
                 >
-                    BLUEBAY
+                    {/* BLUEBAY */}
+                    <img style={{width:"100%", objectFit:"contain"}} src="https://res.cloudinary.com/dzqoo2so5/image/upload/v1710458787/bluebay/images/logo/imozuqakjg9wfju3ym4v.png" alt="logo blue bay car rental" />
                 </NavigateTo>
                 {showNavbar?(
                     <>
