@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import "./Featured.css";
 import { Vehicle } from "../../../../Entity/Vehicle";
 import FeaturedCard from "./Components/FeaturedCar";
-import Filters from "./Components/Filters";
 import { Filter } from "../../../../Entity/Filter";
 import { VehicleContext } from "../../../../Context/Vehicle";
 import { FirebaseService } from "../../../../controller/FirebaseController";
@@ -57,7 +56,6 @@ const Featured = () => {
             </div>
             <section className="featured__header">
                 <h2 className="Featured__headline">Conoce nuestra flota</h2>
-                <Filters setFilter={setFilter} filter={filter} />
             </section>
             <ul className="featured-cars">
                 <p className="bg__tagline">BLUE BAY</p>
