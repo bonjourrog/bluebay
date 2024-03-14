@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { RiMenu4Fill } from "react-icons/ri";
 import { Link } from "react-scroll";
+import { Link as NavigateTo } from "react-router-dom";
 import { HeaderProps } from "./Header.props";
 
 const Header:React.FC<HeaderProps> = ({showNavbar}) => {
@@ -32,38 +33,41 @@ const Header:React.FC<HeaderProps> = ({showNavbar}) => {
                 }}
                 className="nav"
             >
-                <p
-                    style={{ fontSize: scrolling ? "1em" : "" , justifyContent:showNavbar?"start":"center"}}
+                <NavigateTo to={"/"}
+                    style={{ fontSize: scrolling ? "1em" : "" , margin:showNavbar?"0":"0 auto"}}
                     className="logo"
                 >
                     BLUEBAY
-                </p>
-                <span
-                    onClick={() => setToggleMenu(!toggleMenu)}
-                    className="menu"
-                >
-                    <RiMenu4Fill style={{color: toggleMenu ? 'white' : '#09225D', fontSize:"2em"}}/>
-                </span>
+                </NavigateTo>
                 {showNavbar?(
-                    <ul
-                        className={`nav__list ${
-                            toggleMenu ? "menu__opened" : "menu__closed"
-                        }`}
-                    >
-                        <li>
-                            <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="fleet" smooth={true} activeClass="active-link" spy={true}>Flota</Link>
-                            
-                        </li>
-                        <li>
-                            <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="why-us" smooth={true} activeClass="active-link" spy={true}>Elígenos</Link>
-                        </li>
-                        <li>
-                            <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="services" smooth={true} activeClass="active-link" spy={true}>Servicios</Link>
-                        </li>
-                        <li>
-                            <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="contact" smooth={true} activeClass="active-link" spy={true}>Contacto</Link>
-                        </li>
-                    </ul>   
+                    <>
+                        <span
+                            onClick={() => setToggleMenu(!toggleMenu)}
+                            className="menu"
+                        >
+                            <RiMenu4Fill style={{color: toggleMenu ? 'white' : '#09225D', fontSize:"2em"}}/>
+                        </span>
+                    
+                        <ul
+                            className={`nav__list ${
+                                toggleMenu ? "menu__opened" : "menu__closed"
+                            }`}
+                        >
+                            <li>
+                                <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="fleet" smooth={true} activeClass="active-link" spy={true}>Flota</Link>
+                                
+                            </li>
+                            <li>
+                                <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="why-us" smooth={true} activeClass="active-link" spy={true}>Elígenos</Link>
+                            </li>
+                            <li>
+                                <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="services" smooth={true} activeClass="active-link" spy={true}>Servicios</Link>
+                            </li>
+                            <li>
+                                <Link onClick={()=>setToggleMenu(false)} className="unactive-link" to="contact" smooth={true} activeClass="active-link" spy={true}>Contacto</Link>
+                            </li>
+                        </ul>   
+                    </>
                     )
                     :
                     undefined

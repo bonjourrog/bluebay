@@ -17,12 +17,14 @@
 .logo{
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 6em;
     font-weight: 900;
     color: var(--app-blue-cobalt);
     height: 100%;
     font-size: 2em;
+    text-decoration: none;
     transition: all .3s ease-in-out;
+    cursor: pointer;
 }
 .nav__list{
     height: 100%;

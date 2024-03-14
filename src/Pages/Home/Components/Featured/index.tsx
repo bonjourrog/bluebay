@@ -11,7 +11,7 @@ const Featured = () => {
     const { vehicles, setVehicles } = useContext(VehicleContext);
     const [vehiclesToShow, setVehiclesToShow] = useState<Vehicle[]>([]);
 
-    const [filter, setFilter] = useState<Filter>({
+    const [filter] = useState<Filter>({
         small: true,
         large: false,
         all: false,
