@@ -6,7 +6,7 @@ const Hero: React.FC<HeroProps> = ({message, height}) => {
         <section className="hero" style={{height: height}}>
             <div className="hero__image">
                 <img
-                    src="https://res.cloudinary.com/dzqoo2so5/image/upload/v1708315925/bluebay/images/pfv4x9zrwgaxaccz8fxw.jpg"
+                    src="https://res.cloudinary.com/dzqoo2so5/image/upload/v1710440926/bluebay/images/cdoh3xpockv6yvblipac.jpg"
                     alt="parked cars"
                 />
             </div>

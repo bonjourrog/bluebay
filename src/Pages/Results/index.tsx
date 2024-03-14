@@ -43,7 +43,7 @@ const Results = ()=>{
         <Hero message={""} height="50vh"/>
         <div className='space'></div>
         <div className='results__info'>
-            <p>Aprobecha nuestras ofertas</p>
+            <p>Aprovecha nuestras ofertas</p>
             <ul className='results__offers'>
                 <li className='offer'>
                     <span>30%</span>
