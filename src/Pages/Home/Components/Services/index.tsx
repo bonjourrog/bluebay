@@ -22,7 +22,7 @@ const Services = ()=>{
                     <GiSteeringWheel className='service__icon'/>
                     <h6>CHOFER</h6>
                     <p className='service__details'>
-                        En Blue Bay Car Rental comtamos con servicio de chofer en puerto peñasco
+                        En Blue Bay Car Rental contamos con servicio de chofer en puerto peñasco
                     </p>
                 </li>
             </ul>

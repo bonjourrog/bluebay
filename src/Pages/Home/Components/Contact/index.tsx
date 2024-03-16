@@ -34,7 +34,7 @@ const Contact = () => {
                         </li>
                         <li>
                             <TiLocation />
-                            Blv. Freemont 210
+                            Blv. Freemont S/N COL. CENTRO C.P 83550. Puerto Peñasco, Sonora méxico
                         </li>
                     </ul>
                 </li>
