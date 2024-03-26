@@ -12,7 +12,7 @@ const Contract: React.FC<ContractProps> = ()=>{
     const [current, setCurrent] = useState<number>(0);
     const {showContractForm, setShowContractForm, vehicleToShow, startDate, endDate, setShowDialog} = useContext(VehicleContext);
     const [message, setMessage] = useState<any>({});
-    const [appWidth, setAppWidth] = useState(0)
+    const [appWidth, setAppWidth] = useState(window.innerWidth)
     const steps = [
         {
             title: 'Datos personal',
