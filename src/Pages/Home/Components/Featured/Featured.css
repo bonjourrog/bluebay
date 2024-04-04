@@ -28,7 +28,7 @@
     font-size: 12vw;
     font-weight: 900;
     letter-spacing: .1em;
-    color:rgb(37, 38, 41);
+    color:rgba(143, 143, 143, 0.153);
     z-index: 0;
 }
 .Featured__headline{
@@ -37,13 +37,14 @@
 .featured-cars{
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(21em, 1fr));
-    gap: 5em;
+    justify-content: end;
+    grid-template-columns: 1fr 1fr;
 }
 @media screen and (max-width: 1246px) {
     .bg__tagline{
         font-size: 10vw;
     }
+    
 }
 @media screen and (max-width: 920px){
     .bg__tagline{
@@ -58,6 +59,9 @@
     }
     .Featured__search{
         width: 100%;
+    }
+    .featured-cars{
+        grid-template-columns: 1fr;
     }
 }
 @media screen and (max-width: 700px){

@@ -6,24 +6,21 @@ import { Filter } from "../../../../Entity/Filter";
 import { VehicleContext } from "../../../../Context/Vehicle";
 import { FirebaseService } from "../../../../controller/FirebaseController";
 import Search from "../../../../Components/Search";
-
+import { filterModelVehicles } from "./FeatureUtils";
 const Featured = () => {
     const { vehicles, setVehicles } = useContext(VehicleContext);
     const [vehiclesToShow, setVehiclesToShow] = useState<Vehicle[]>([]);
-
     const [filter] = useState<Filter>({
         small: true,
         large: false,
         all: false,
     });
-
     const getVehicles = () => {
         setVehicles(vehicles);
         setVehiclesToShow(vehicles);
         const filterApply = Object.entries(filter)
             .filter(([_, value]) => value === true)
             .map(([key]) => key);
-
         const vehiclesfiltered: Vehicle[] = vehicles.filter(
             (elem) => elem.type === filterApply[0]
         );
@@ -37,18 +34,12 @@ const Featured = () => {
     useEffect(()=>{
         FirebaseService.getVehicles().then(res=>{
             setVehicles(res);
-            setVehiclesToShow(res);
+            const newArray=filterModelVehicles(vehicles);
+            setVehiclesToShow(newArray);
         }).catch(_=>{
             console.log("error fetching data, look featured component");
-            
-            
         })
-    },[])
-    useEffect(() => {
-        getVehicles();
-        
-    }, [filter]);
-
+    },[]);
     return (
         <section className="Featured" id="fleet">
             <div className="Featured__search">
