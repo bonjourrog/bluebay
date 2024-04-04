@@ -26,8 +26,7 @@ const ContactForm = ()=>{
         },
         validationSchema:ContactFormSchema,
         onSubmit:(values, {setSubmitting, resetForm})=>{
-            emailjs.send(import.meta.env.VITE_FORMIK_SERVICE_ID,import.meta.env.VITE_FORMIK_TEMPLATE_ID, 
-                values, import.meta.env.VITE_FORMIK_PUBLIC_KEY)
+            emailjs.send(import.meta.env.VITE_FORMIK_SERVICE_ID,import.meta.env.VITE_FORMIK_TEMPLATE_ID, values, import.meta.env.VITE_FORMIK_PUBLIC_KEY)
                 .then(() => {
                     handleCloseFormMessage(true);
                     setSubmitting(false);

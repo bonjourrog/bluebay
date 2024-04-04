@@ -13,6 +13,8 @@ const Header:React.FC<HeaderProps> = ({showNavbar}) => {
     const handleScroll = () => {
         setScrolling(window.scrollY > 6);
         setScroll(window.scrollY);
+        console.log(window.scrollY);
+        
     };
 
     useEffect(() => {
