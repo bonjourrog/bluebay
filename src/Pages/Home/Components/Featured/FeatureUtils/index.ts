@@ -10,4 +10,4 @@ export const filterModelVehicles = (array:Vehicle[])=>{
         }
     });
     return newArray;
-} 
+}
