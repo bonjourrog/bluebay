@@ -1,0 +1,11 @@
+.footer__menu{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.footer__link{
+    color: #022677;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: .1em;
+}

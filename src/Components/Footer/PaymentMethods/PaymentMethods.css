@@ -7,6 +7,13 @@
     display: flex;
     gap: 1em;
 }
+@media screen and (max-width: 1100px){
+    .methods{
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+    }
+}
 @media screen and (max-width: 800px){
     .methods__title{
         text-align: center;

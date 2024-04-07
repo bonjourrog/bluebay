@@ -64,7 +64,7 @@ const Results = ()=>{
             ))
         }
         </ul>
-        <Footer DarkBg/>
+        <Footer DarkBg={false}/>
     </div>
 }
 

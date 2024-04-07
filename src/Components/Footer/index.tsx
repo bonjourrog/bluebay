@@ -5,12 +5,14 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { FooterProps } from "./Footer.props";
 import OpenHours from "./OpenHours";
 import PaymentMethods from "./PaymentMethods";
+import FooterMenu from "./FooterMenu";
 
 const Footer:React.FC<FooterProps> = ({DarkBg}) => {
     return (
         <footer className="Footer" style={{backgroundColor:DarkBg?'var(--app-gray)':'white'}}>
             <section className="Footer__top">
                 <img className="Footer__logo" src="https://res.cloudinary.com/dzqoo2so5/image/upload/v1710458787/bluebay/images/logo/imozuqakjg9wfju3ym4v.png" />
+                <FooterMenu/>
                 <OpenHours/>
                 <PaymentMethods/>
             </section>
