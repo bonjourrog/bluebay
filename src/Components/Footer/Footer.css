@@ -9,7 +9,7 @@
     padding: 2em 12em;
 }
 .Footer__logo{
-    width: 20em;
+    width: 18em;
 }
 .Footer__socials{
     display: flex;
@@ -20,6 +20,11 @@
 }
 .Footer__message{
     margin-top: 2em;
+}
+.Footer__top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 @media screen and (max-width: 920px){
     .Footer{
