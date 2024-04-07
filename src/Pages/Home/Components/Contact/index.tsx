@@ -20,7 +20,7 @@ const Contact = () => {
     return (
         <section className="Location" id="contact">
             <ContactForm/>
-            <h2 className="location-headline">CONTACT</h2>
+            {/* <h2 className="location-headline">CONTACT</h2> */}
             <ul className="business-info">
                 <li className="busines__contact">
                     <ul>
