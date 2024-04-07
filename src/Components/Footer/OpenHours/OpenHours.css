@@ -1,0 +1,7 @@
+.openhours__time{
+    display: flex;
+}
+.openhours__day{
+    color: #022677;
+    font-weight: bold;
+}
