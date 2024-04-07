@@ -1,0 +1,17 @@
+.payment-methods{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.methods{
+    display: flex;
+    gap: 1em;
+}
+@media screen and (max-width: 800px){
+    .methods__title{
+        text-align: center;
+    }
+    .methods{
+        justify-content: center;
+    }
+}

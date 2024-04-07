@@ -6,7 +6,8 @@
     gap: 1em;
     width: 100%;
     min-height: 20em;
-    padding: 2em 12em;
+    padding: 2em 2em;
+    border: .1em solid red;
 }
 .Footer__logo{
     width: 18em;
@@ -29,5 +30,12 @@
 @media screen and (max-width: 920px){
     .Footer{
         padding: 2em 3em;
+    }
+}
+@media screen and (max-width: 800px){
+    .Footer__top{
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
     }
 }
