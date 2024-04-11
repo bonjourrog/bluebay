@@ -39,6 +39,9 @@
     cursor: pointer;
     background-color: var(--app-blue-cobalt);
 }
+.search-button--disable{
+    background-color: rgb(127, 127, 153);
+}
 .ant-picker-time-panel-cell-disabled{
     display: none;
 }

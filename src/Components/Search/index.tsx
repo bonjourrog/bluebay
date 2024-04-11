@@ -1,5 +1,5 @@
 import "./Search.css";
-import { DatePicker } from 'antd';
+import { DatePicker, notification } from 'antd';
 import dayjs, {Dayjs} from 'dayjs';
 import { useContext, useEffect } from "react";
 import { VehicleContext } from "../../Context/Vehicle";
@@ -10,6 +10,15 @@ import { SearchProps } from "./Search.props";
 const Search:React.FC<SearchProps> = ({showSearchBtn}) => {
 
     const {startDate, setStartDate, endDate, setEndDate, currentTime, setCurrentTime, vehicles} = useContext(VehicleContext);
+    const [api, contexHolder ] = notification.useNotification();
+
+    const handleSearch = ()=>{
+        api.info({
+            message:"Seleccione una hora",
+            description: "Debede seleccionar la hora a la que recogera el auto",
+            placement:"bottomRight"
+        });
+    }
     
     let min: Dayjs = dayjs(new Date());
     const {RangePicker} = DatePicker;
@@ -65,6 +74,7 @@ const Search:React.FC<SearchProps> = ({showSearchBtn}) => {
     },[])
     return (
         <div className="Search">
+            {contexHolder}
             <RangePicker
                 allowEmpty={false}
                 allowClear={false}
@@ -90,7 +100,9 @@ const Search:React.FC<SearchProps> = ({showSearchBtn}) => {
                         <BiSearch color="white" size={30}/>
                     </Link>)
                     :
-                    undefined
+                    (<Link to={""} onClick={handleSearch} className="search-button search-button--disable">
+                        <BiSearch color="white" size={30}/>
+                    </Link>)
                 }
         </div>
     );
