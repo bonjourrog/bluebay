@@ -1,3 +1,4 @@
+import FAQ from "../../Components/FAQ";
 import Footer from "../../Components/Footer";
 import Header from "../../Components/Header";
 import Contact from "./Components/Contact";
@@ -17,6 +18,7 @@ const Home = () => {
             <WhyUs />
             <Services/>
             <Contact />
+            <FAQ/>
             <Footer DarkBg={false}/>
             <VehicleDetails />
         </div>
