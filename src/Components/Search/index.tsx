@@ -94,15 +94,17 @@ const Search:React.FC<SearchProps> = ({showSearchBtn}) => {
                 showNow={false}
                 className="time-picker"/>
                 {
-                    showSearchBtn && currentTime !== null
-                    ?
-                    (<Link  to={"/results"} onClick={handleVehicles} className="search-button">
-                        <BiSearch color="white" size={30}/>
-                    </Link>)
+                    showSearchBtn ?
+                    currentTime !==null ?
+                            (<Link  to={"/results"} onClick={handleVehicles} className="search-button">
+                                <BiSearch color="white" size={30}/>
+                            </Link>) 
+                        : 
+                            (<Link to={""} onClick={handleSearch} className="search-button search-button--disable">
+                                <BiSearch color="white" size={30}/>
+                            </Link>)
                     :
-                    (<Link to={""} onClick={handleSearch} className="search-button search-button--disable">
-                        <BiSearch color="white" size={30}/>
-                    </Link>)
+                    null
                 }
         </div>
     );

@@ -16,7 +16,6 @@ export const VehicleProvider: React.FC<VehicleProviderProps> = ({
     const [showContractForm, setShowContractForm] = useState<boolean>(false)
     const [contract, setContract] = useState<Contract>({} as Contract);
     const [showDialog, setShowDialog] = useState<boolean>(false);
-
     const [startDate, setStartDate] = useState<Dayjs>(dayjs(new Date()));
     const [endDate, setEndDate] = useState<Dayjs>(dayjs(new Date().getTime()+86400000));
 

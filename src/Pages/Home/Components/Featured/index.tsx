@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import "./Featured.css";
 import { Vehicle } from "../../../../Entity/Vehicle";
 import FeaturedCard from "./Components/FeaturedCar";
-// import { Filter } from "../../../../Entity/Filter";
 import { VehicleContext } from "../../../../Context/Vehicle";
 import { FirebaseService } from "../../../../controller/FirebaseController";
 import Search from "../../../../Components/Search";
@@ -10,26 +9,6 @@ import { filterModelVehicles } from "./FeatureUtils";
 const Featured = () => {
     const { setVehicles } = useContext(VehicleContext);
     const [vehiclesToShow, setVehiclesToShow] = useState<Vehicle[]>([]);
-    // const [filter] = useState<Filter>({
-    //     small: true,
-    //     large: false,
-    //     all: false,
-    // });
-    // const getVehicles = () => {
-    //     setVehicles(vehicles);
-    //     setVehiclesToShow(vehicles);
-    //     const filterApply = Object.entries(filter)
-    //         .filter(([_, value]) => value === true)
-    //         .map(([key]) => key);
-    //     const vehiclesfiltered: Vehicle[] = vehicles.filter(
-    //         (elem) => elem.type === filterApply[0]
-    //     );
-    //     if (vehiclesfiltered.length === 0) {
-    //         setVehiclesToShow(vehicles);
-    //         return;
-    //     }
-    //     setVehiclesToShow(vehiclesfiltered);
-    // };
     useEffect(()=>{
         FirebaseService.getVehicles().then(res=>{
             setVehicles(res);

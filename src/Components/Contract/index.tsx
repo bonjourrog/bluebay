@@ -2,15 +2,21 @@ import './Contract.css';
 import { Steps } from 'antd';
 import { ContractProps } from './Contrac.props';
 import { useContext, useEffect, useState } from 'react';
-import { SmileOutlined } from '@ant-design/icons';
+// import { SmileOutlined } from '@ant-design/icons';
 import { VehicleContext } from '../../Context/Vehicle';
 import { useFormik } from 'formik';
 import { ContactSchema } from './Contract.schema';
 import emailjs from '@emailjs/browser';
+import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
+dayjs.extend(customParseFormat);
+dayjs.extend(localizedFormat);
 
 const Contract: React.FC<ContractProps> = ()=>{
     const [current, setCurrent] = useState<number>(0);
-    const {showContractForm, setShowContractForm, vehicleToShow, startDate, endDate, setShowDialog} = useContext(VehicleContext);
+    const {showContractForm, setShowContractForm, vehicleToShow, startDate, endDate, setShowDialog, currentTime} = useContext(VehicleContext);
+    
     const [message, setMessage] = useState<any>({});
     const [appWidth, setAppWidth] = useState(window.innerWidth)
     const steps = [
@@ -27,7 +33,7 @@ const Contract: React.FC<ContractProps> = ()=>{
             description:"Información de tu licensia",
         },
         {
-            title: 'Temrinado',
+            title: 'Terminado',
             description:"Verifique la información",
             icon: <SmileOutlined/>
         },
@@ -51,7 +57,7 @@ const Contract: React.FC<ContractProps> = ()=>{
             to_name:"Blue Bay Car Rental",
             subject:"Solicitud de Contrato",
             replay_to:"",
-            message:"",
+            message:""
         },
         validationSchema:ContactSchema,
         onSubmit:(values, {setSubmitting, resetForm})=>{
@@ -68,6 +74,10 @@ const Contract: React.FC<ContractProps> = ()=>{
                 INE: ${values.passport}
                 Licensia: ${values.license}
                 Fecha de expiración: ${values.expired_date}
+                Fecha de la renta: ${startDate.format("DD/MM/YYYY")}
+                Hora de la renta: ${currentTime.format("HH:mm")}
+                Fecha de llegada: ${endDate.format("DD/MM/YYYY")}
+                Vehiculo ${vehicleToShow.make} ${vehicleToShow.model}
             `;
             
             emailjs.send(import.meta.env.VITE_FORMIK_SERVICE_ID,import.meta.env.VITE_FORMIK_SECOND_TEMPLTE_ID, 

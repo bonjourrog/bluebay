@@ -7,7 +7,7 @@ const Services = ()=>{
         <div className='Services__header'>            
         <h2 className='Services__headline'>Servicios</h2>
         <p className='services__message'>En nuestro catálogo encontrarás una amplia gama de opciones para satisfacer todas tus necesidades de movilidad y cuidado vehicular</p>
-            <img src="https://res.cloudinary.com/dzqoo2so5/image/upload/v1708315925/bluebay/images/pfv4x9zrwgaxaccz8fxw.jpg" alt="" />
+            {/* <img src="https://res.cloudinary.com/dzqoo2so5/image/upload/v1708315925/bluebay/images/pfv4x9zrwgaxaccz8fxw.jpg" alt="" /> */}
         </div>
         <div className='Services__container'>
             <ul className='Services__list'>

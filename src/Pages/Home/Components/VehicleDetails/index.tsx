@@ -68,7 +68,7 @@ const VehicleDetails = () => {
                             {vehicleToShow.passenger_capacity}
                         </li>
                     </ul>
-                    {vehicleToShow.available ? (
+                    {/* {vehicleToShow.available ? (
                             <p className="vehicle__availability" style={{ color: "rgb(82, 186, 82)", border:".1em solid rgb(82, 186, 82)" }}>
                                 Disponible
                             </p>
@@ -76,7 +76,7 @@ const VehicleDetails = () => {
                             <p className="vehicle__availability" style={{ color: "rgb(186, 82, 82)", border:".1em solid rgb(186, 82, 82)" }}>
                                 No Disponible
                             </p>
-                        )}
+                        )} */}
                 </div>
             </div>
         </section>
