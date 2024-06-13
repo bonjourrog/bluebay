@@ -2,7 +2,6 @@ import './Contract.css';
 import { Steps } from 'antd';
 import { ContractProps } from './Contrac.props';
 import { useContext, useEffect, useState } from 'react';
-// import { SmileOutlined } from '@ant-design/icons';
 import { VehicleContext } from '../../Context/Vehicle';
 import { useFormik } from 'formik';
 import { ContactSchema } from './Contract.schema';
@@ -35,7 +34,6 @@ const Contract: React.FC<ContractProps> = ()=>{
         {
             title: 'Terminado',
             description:"Verifique la información",
-            icon: <SmileOutlined/>
         },
 
     ];
