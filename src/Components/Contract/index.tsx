@@ -195,7 +195,7 @@ const Contract: React.FC<ContractProps> = ()=>{
                             </label>
                             <label htmlFor="">
                                 Vencimiento
-                                <input type="text" name='expired_date' id='expired_date' onChange={(e)=>handleInputs(e)} value={formik.values.expired_date}/>
+                                <input type="date" name='expired_date' id='expired_date' onChange={(e)=>handleInputs(e)} value={formik.values.expired_date}/>
                                 <div className={`input-message ${formik.touched.expired_date && formik.errors.expired_date}`}>{formik.errors.expired_date}</div>
                             </label>
                         </>
