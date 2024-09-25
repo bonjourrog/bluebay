@@ -59,8 +59,8 @@ const Results = ()=>{
         <ul className='results__list'>
         <Search showSearchBtn={false}/>
         {
-            vehicleList.map((vehicle:Vehicle)=>(
-                <VehicleCard key={vehicle.id} vehicle={vehicle} date_range={dateRange}/>
+            vehicleList.map((vehicle:Vehicle, index)=>(
+                <VehicleCard key={index} vehicle={vehicle} date_range={dateRange}/>
             ))
         }
         </ul>
