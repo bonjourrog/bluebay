@@ -111,11 +111,12 @@ const Contract: React.FC<ContractProps> = ()=>{
         return ()=>{
             window.removeEventListener('resize', handleWidth)
         }
-    } ,[appWidth])
+    } ,[])
 
     return <section
         className={`contract ${showContractForm ? 'contract--show' : 'contract--hide'}`}>
-        <Steps
+        {
+            appWidth>576?<Steps
             className='contract__steps'
             direction={`${appWidth>800 ? 'vertical' : 'horizontal'}`}
             current={current}
@@ -123,7 +124,8 @@ const Contract: React.FC<ContractProps> = ()=>{
             items={steps}
             size='small'
         >
-        </Steps>
+        </Steps>:undefined
+        }
         <section className='forms'>
             <form onSubmit={formik.handleSubmit}>
                 {
