@@ -73,6 +73,29 @@
     color: var(--app-gray-mid) !important;
     font-size: 1.5em !important;
 }
+.ant-select{
+    height: 100%;
+}
+.ant-select-selector{
+    width: 10em !important;
+    height: 10em !important;
+    border:none !important;
+    font-weight: bold !important;
+}
+.ant-select-selector>span{
+    font-size: 1.5em !important;
+    font-weight: bold;
+}
+.ant-select-selector>.ant-select-selection-item{
+    font-weight: bold;
+    text-align: center;
+    color: rgb(116, 116, 116) !important;
+}
+.ant-select-item-option-content{
+    font-weight: bold !important;
+    text-align: center !important;
+    color: rgb(116, 116, 116) !important;
+}
 @media screen and (max-width:620px) {
     .Search{
         flex-direction: column;

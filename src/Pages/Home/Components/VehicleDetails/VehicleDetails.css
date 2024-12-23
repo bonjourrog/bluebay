@@ -1,10 +1,11 @@
 .Vehicle-Details{
     position: fixed;
     right: 0;
-    top: 0;
-    height: 100vh;
+    top: 50%;
+    height: 65vh;
     backdrop-filter: blur(10px);
     z-index: 1001;
+    transform: translateY(-50%);
     transition: all .3s ease-in-out;
     box-shadow: -.3em .3em 1em rgba(0, 0, 0, 0.2);
     overflow: hidden;

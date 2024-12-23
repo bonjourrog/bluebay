@@ -1,16 +1,20 @@
 import "./Search.css";
 import { DatePicker, notification } from 'antd';
 import dayjs, {Dayjs} from 'dayjs';
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { VehicleContext } from "../../Context/Vehicle";
 import { BiSearch } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { SearchProps } from "./Search.props";
+import { Select, Space } from 'antd';
+import { MdOutlineReduceCapacity } from "react-icons/md";
+
 
 const Search:React.FC<SearchProps> = ({showSearchBtn}) => {
 
     const {startDate, setStartDate, endDate, setEndDate, currentTime, setCurrentTime, vehicles} = useContext(VehicleContext);
     const [api, contexHolder ] = notification.useNotification();
+    const [capacity, setCapacity] = useState<{value:number, label:number}[]>([]);
 
     const handleSearch = ()=>{
         api.info({
@@ -72,6 +76,16 @@ const Search:React.FC<SearchProps> = ({showSearchBtn}) => {
             setStartDate(startDate.add(1, "day"));
         }
     },[])
+    useEffect(()=>{
+        const myMap:{[key:number]:boolean} = {}
+        setCapacity([]);
+        vehicles.forEach(elem=>{
+            if(!myMap[elem.passenger_capacity]){
+                myMap[elem.passenger_capacity]=true;
+                setCapacity(prev=>[...prev, {value:elem.passenger_capacity, label:elem.passenger_capacity}]);
+            }
+        })
+    },[vehicles])
     return (
         <div className="Search">
             {contexHolder}
@@ -93,6 +107,7 @@ const Search:React.FC<SearchProps> = ({showSearchBtn}) => {
                 picker="time" 
                 showNow={false}
                 className="time-picker"/>
+                <Select onChange={()=>{}} className='Search__capacity' placeholder="Capacidad" options={capacity} suffixIcon={<MdOutlineReduceCapacity/>} />
                 {
                     showSearchBtn ?
                     currentTime !==null ?

@@ -13,7 +13,7 @@ const Featured = () => {
         FirebaseService.getVehicles().then(res=>{
             setVehicles(res);
             const newArray=filterModelVehicles(res);
-            setVehiclesToShow(newArray);
+            setVehiclesToShow(newArray.slice(0,4));
         }).catch(_=>{
             console.log("error fetching data, look featured component");
         })
